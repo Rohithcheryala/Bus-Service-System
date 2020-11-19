@@ -1,0 +1,94 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "bssdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $db);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// create user table
+$sql = "CREATE TABLE user (
+    cardno INT(10) NOT NULL UNIQUE, 
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    phno INT(12) NOT NULL UNIQUE,
+    balance INT(6) NOT NULL
+    )";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+    echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+// create admin table
+$sql = "CREATE TABLE admin (
+    cardno INT(10) NOT NULL UNIQUE, 
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    phno INT(12) NOT NULL UNIQUE,
+    balance INT(6) NOT NULL
+    )";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+    echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+// create schedule table
+$sql = "CREATE TABLE schedule (
+    busno VARCHAR(10) NOT NULL, 
+    tripno INT(2) NOT NULL,
+    date INT(8) NOT NULL, -- yyyy-mm-dd 
+    day INT(2) NOT NULL, -- dd is the fromat , its not like 'monday' or 'tuesday'.
+    fromplace VARCHAR(30) NOT NULL,
+    fromtime INT(6) NOT NULL,
+    toplace VARCHAR(30) NOT NULL,
+    totime INT(6) NOT NULL
+    )";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+    echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+// create Per bus table  --> must be executed with diff names
+$busno = "bus1";
+$sql = "CREATE TABLE $busno (
+    busno VARCHAR(10) NOT NULL, 
+    tripno INT(2) NOT NULL,
+    driver VARCHAR(30) NOT NULL,
+    date INT(8) NOT NULL, -- yyyy-mm-dd 
+    seatno INT(2) NOT NULL,
+    status INT(1) NOT NULL
+    )";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+    echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+// create revenue table
+$sql = "CREATE TABLE revenue (
+    busno VARCHAR(10) NOT NULL, 
+    tripno INT(2) NOT NULL,
+    fuel INT(6) NOT NULL, -- lets keep them negative because its outgoing 
+    maintainance INT(6) NOT NULL, -- lets keep them negative because its outgoing 
+    income INT(2) NOT NULL, -- through tickets
+    status INT(1) NOT NULL, -- 1 -> free    0 -> occupied
+    date INT(8) NOT NULL -- yyyy-mm-dd 
+    )";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+    echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+mysqli_close($conn);
+?>
