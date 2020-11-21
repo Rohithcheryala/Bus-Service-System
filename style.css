@@ -1,6 +1,13 @@
-input[type=button],input[type=submit],input[type=reset]{
+input[type=button]{
+
+}
+input[type=submit],input[type=reset]{
 
     border-radius:30px;
+    border : none;
+    font-size: 17px;
+    margin : 10px 0px;
+    padding : 10px 20px;
     
 
 }
