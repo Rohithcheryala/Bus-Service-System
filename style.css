@@ -1,13 +1,76 @@
-input[type=button]{
+.fix{
+    position:fixed;
+    width:95%;
+    background-color: lightblue;
+}
+.header{
+    padding:10px 10px;
+}
+.log{
+    float:left;
+    padding:0px 30px;
+}
+.left{
+    float:left;
+    padding : 0px 150px;
+}
+.topnav{
+    overflow: hidden;
+    background-color:black;
+    float:left;
+    border-radius:30px;
+    width:80%;
+    padding:4px 10%;
+}
+
+.topnav a{
+    float:left;
+    background-color: black;
+    border:none;
+    color:ghostwhite;
+    padding:10px 30px;
+    font-size:17px;
+    text-align:center;
+    border-radius:30px;
 
 }
-input[type=submit],input[type=reset]{
+.topnav a.logout{
+    float:right;
+}
+.topnav a.active{
+    background-color: blue;
+}
+
+.topnav a:hover{
+    background-color: darkgray ;
+    color:white;
+}
+
+
+input{
+    border-radius:5px;
+    border-color:steelblue;
+    padding:5px 10px;
+    background-color: ghostwhite;
+}
+button[type=submit],button[type=reset]{
 
     border-radius:30px;
-    border : none;
+    border :none;
     font-size: 17px;
     margin : 10px 0px;
     padding : 10px 20px;
+    background-color:darkblue;
+    color:white;
     
+
+}
+
+#logo{
+
+}
+body{
+    vertical-align: middle;
+    background-color: lightblue;
 
 }
