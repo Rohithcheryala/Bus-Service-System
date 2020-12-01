@@ -26,6 +26,8 @@ if ($query) {
   } else {
     echo mysqli_error($conn);
   }
+
+
 // create admin table
 $sql = "CREATE TABLE admin (
     cardno INT(10) NOT NULL UNIQUE, 
@@ -41,6 +43,8 @@ if ($query) {
   } else {
     echo mysqli_error($conn);
   }
+
+
 // create schedule table
 $sql = "CREATE TABLE schedule (
     busno VARCHAR(10) NOT NULL, 
@@ -58,6 +62,8 @@ if ($query) {
   } else {
     echo mysqli_error($conn);
   }
+
+
 // create Per bus table  --> must be executed with diff names
 $busno = "bus1";
 $sql = "CREATE TABLE $busno (
@@ -74,12 +80,14 @@ if ($query) {
   } else {
     echo mysqli_error($conn);
   }
+
+
 // create revenue table
 $sql = "CREATE TABLE revenue (
     busno VARCHAR(10) NOT NULL, 
     tripno INT(2) NOT NULL,
     fuel INT(6) NOT NULL, -- lets keep them negative because its outgoing 
-    maintainance INT(6) NOT NULL, -- lets keep them negative because its outgoing 
+    maintenance INT(6) NOT NULL, -- lets keep them negative because its outgoing 
     income INT(2) NOT NULL, -- through tickets
     status INT(1) NOT NULL, -- 1 -> free    0 -> occupied
     date INT(8) NOT NULL -- yyyy-mm-dd 
@@ -90,5 +98,22 @@ if ($query) {
   } else {
     echo mysqli_error($conn);
   }
+
+
+// create transaction table
+$sql = "CREATE TABLE transaction(
+    transactionID INT(8) NOT NULL,
+    busno VARCHAR(10) NOT NULL,
+    tripno INT(2) NOT NULL,
+    seatno INT(2) NOT NULL,
+    fromplace VARCHAR(30) NOT NULL,
+    toplace VARCHAR(30) NOT NULL)";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+  echo 1;
+  } else {
+    echo mysqli_error($conn);
+  }
+// closing connection
 mysqli_close($conn);
 ?>
