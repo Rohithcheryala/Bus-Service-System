@@ -14,6 +14,7 @@ if (!$conn) {
 // create user table
 $sql = "CREATE TABLE user (
     cardno INT(10) NOT NULL UNIQUE, 
+    password VARCHAR(15) NOT NULL,
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
@@ -31,6 +32,7 @@ if ($query) {
 // create admin table
 $sql = "CREATE TABLE admin (
     cardno INT(10) NOT NULL UNIQUE, 
+    password VARCHAR(15) NOT NULL,
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
