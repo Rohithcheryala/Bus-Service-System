@@ -3,6 +3,9 @@
 
 <head>
     <style>
+        .hidden{
+            display:none;
+        }
         .error {
             color: #ff0000;
         }
@@ -42,8 +45,7 @@
         if ($cardnoErr == "" && $passwordErr == "") {
             $sql = "SELECT cardno, password FROM " . $type . "
             WHERE   cardno = " . $cardno . " AND 
-            password = " . $password . "";
-            // $sql = "SELECT * FROM user ";
+            password = '$password'";
             $query = mysqli_query($conn, $sql);
             $rows = mysqli_num_rows($query);
             if ($rows == 1) {
@@ -67,14 +69,14 @@
     <h2>PHP Form Validation Example</h2>
     <p><span class="error">* required field</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <input type="hidden" name="type" id="type" value="user"><br>  
+        <input type="text" name="type" id="type" value="user" class="hidden">
         <label for="cardno">Card Number</label>
         <input type="text" name="cardno" id="cardno">
         <span class="error">* <?php echo $cardnoErr; ?></span><br>
         <label for="password">Password</label>
         <input type="password" name="password" id="password">
         <span class="error">* <?php echo $passwordErr; ?></span><br>
-        <span class="error"> <?php echo $Err; ?></span><br>
+        <span class="error" id="err"> <?php echo $Err; ?></span><br>
         <button type="submit">LOG IN</button>
     </form>
    
