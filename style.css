@@ -88,7 +88,7 @@ button[type=submit],button[type=reset]{
     
 
 }
-label{
+label .custom{
     margin-top: 10px;
     display: inline-flex;
     width:200px;
@@ -97,4 +97,40 @@ body{
     vertical-align: middle;
     background-color: whitesmoke;
 
+}
+
+.bus{
+    background-color:azure;
+    border-radius:30px;
+    border:1px solid black;
+    width:40%;
+    padding:15px 100px;
+    margin:15px 150px;
+
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  margin: 5px 10px;
+  border-radius :5px;
+}
+input[type="checkbox"]:disabled+label{
+    background-color: gray;
+    cursor:not-allowed;
+}
+input[type="checkbox"]:checked + label {
+  border: 1px solid black;
+  color: black;
+  background-color: #00ff00;
 }
