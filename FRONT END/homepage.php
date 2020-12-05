@@ -1,334 +1,145 @@
-<?php
-    
-?>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
+    <?php
+    ob_start();
+    session_start();
+    $_SESSION['cardno'] = "";
+    $Err = "card number or password is incorrect";
+    ?>
+    <?php
+    // define variables and set to empty values
+    $Err = $cardnoErr = $passwordErr = "";
+    $cardno = $password = "";
 
-<h2>Modal Login Form</h2>
-<p>Teja styling change chey.</p>
-<p>sign up page ( last lo undhi chuudu) ki inka em raayale ikkada , adhi chuudu.</p>
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $db = "bssdb";
+        ob_start();
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $db);
+        $type = $_POST["type"];
+        $cardno = $_POST["cardno"];
+        $password = $_POST["password"];
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="pass"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-        
-      <button type="submit">Login</button>
-      
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">New user? <a href="#">Create new account?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
-
-        /* Full-width input fields */
-        input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
+        if (preg_match("/^\+?[0-9]+$/", $cardno)) {
+            $cardno = test_input($_POST["cardno"]);
+        } else {
+            $cardnoErr = "Must contain numbers only";
+            ?>
+            <html><script>
+                document.getElementById('cardnoErr').style.display = 'block';
+            </script></html>
+            <?php
         }
 
-        /* Set a style for all buttons */
-        button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
+        if (strlen($password) < 50) {
+            $password = test_input($_POST["password"]);
+        } else {
+            $passwordErr = "password is too lengthy";
+            ?>
+            <html><script>
+                document.getElementById('passwordErr').style.display = 'block';
+            </script></html>
+            <?php
         }
 
-        button:hover {
-        opacity: 0.8;
-        }
 
-        /* Extra styles for the cancel button */
-        .cancelbtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color: #f44336;
-        }
-
-        /* Center the image and position the close button */
-        .imgcontainer {
-        text-align: center;
-        margin: 24px 0 12px 0;
-        position: relative;
-        }
-
-        img.avatar {
-        width: 40%;
-        border-radius: 50%;
-        }
-
-        .container {
-        padding: 16px;
-        }
-
-        span.psw {
-        float: right;
-        padding-top: 16px;
-        }
-
-        /* The Modal (background) */
-        .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        padding-top: 60px;
-        }
-
-        /* Modal Content/Box */
-        .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button (x) */
-        .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-        color: red;
-        cursor: pointer;
-        }
-
-        /* Add Zoom Animation */
-        .animate {
-        -webkit-animation: animatezoom 0.6s;
-        animation: animatezoom 0.6s
-        }
-
-        @-webkit-keyframes animatezoom {
-        from {-webkit-transform: scale(0)} 
-        to {-webkit-transform: scale(1)}
-        }
-        
-        @keyframes animatezoom {
-        from {transform: scale(0)} 
-        to {transform: scale(1)}
-        }
-
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-        span.psw {
-            display: block;
-            float: none;
-        }
-        .cancelbtn {
-            width: 100%;
-        }
-        }
-        </style>
-    </head>
-    <h1>This is home page ( main page ) ( 1st page )</h1>
-    <p>To use our services please login.</p>
-    <button onclick="document.getElementById('loginform').style.display='block'" style="width:auto;">Login</button>
-    <div id="loginform" class="modal">
-        <form action="" method="post" class="">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" >
-
-                <label for="pass"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pass" >
-                    
-                <input type="submit" value="LOG IN">
-            
+        if ($cardnoErr == "" && $passwordErr == "") {
+            $sql = "SELECT cardno, password FROM " . $type . "
+            WHERE   cardno = " . $cardno . " AND 
+            password = '$password'";
+            $query = mysqli_query($conn, $sql);
+            // echo $sql;
+            $rows = mysqli_num_rows($query);
+            if ($rows == 1) {
+                // go to respective home page
+                header("Location: userfirstpage.php");
+                $_SESSION['cardno'] = $cardno;
                 
+            } else {
+                $Err = "card number or password is incorrect";
+                ?>
+                <html><script>
+                    document.getElementById('Err').style.display = 'block';
+                </script></html>
+                <?php
+            }
+        }
+        /* // if ($Err != "" || $cardnoErr != "" || $passwordErr != "") {
+        //     ?>
+        //     <html><script>
+        //         document.getElementById('cardnoErr').style.display = 'block';
+        //     </script></html>
+        //     <?php
+        // } */
+    }
+
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    ?>
+    <div class="fix">
+        <div class="header">
+            <div class="log">
+                <img src="logo.jpg" width=70px height=70px>
+            </div>
+            <div class="left">
+                <h1>BUS RESERVATION SYSTEM<sup>TM</sup></h1>
+            </div>
+        </div>
+        <div class="topnav">
+            <a class="active">Home</a>
+            <a>Item2</a>
+            <a>Item3</a>
+            <a class="logout">logout</a>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    &emsp;
+    <div class="floleft">
+        <p>This is basic project demonstration by team PHOENIX</p>
+        <p>To fall along please login.</p>
+    </div>
+    <div class="flonext" id=""><br><br>
+        <h3>LOGIN</h3>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div id="loginform" class="">
+                <input type="text" name="type" id="type" value="user" class="hidden" readonly>
+                
+                <label for="cardno">Card Number</label>
+                <input type="number" name="cardno" id="cardno" required>
+                <span class="error" id="cardnoErr">* <?php echo $cardnoErr; ?></span><br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <span class="error" id="passwordErr">* <?php echo $passwordErr; ?></span><br>
+
+                <span class="error" id="Err"> <?php echo $Err; ?></span><br>
+                <button type="submit" value="Submit">LOGIN</button>
             </div>
         </form>
     </div>
-</html> -->
+    
+    
+</body>
+
+</html>
