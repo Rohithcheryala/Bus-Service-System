@@ -45,13 +45,134 @@
 
 
     // for schedule table
-    
+    $today = '2020-12-05';
 
+    // R1
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Mumbai', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Mumbai', '$today', '13:00:00', 'Delhi', '$today','02:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Delhi', '$today', '05:00:00', 'Mumbai', '$today','18:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Mumbai', '$today', '21:00:00', 'Delhi', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B1', '1', 'Delhi', '$today', '13:00:00', 'Mumbai', '$today','02:00:00'  ;";
 
+    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Mumbai', '$today', '21:00:00', 'Delhi', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Delhi', '$today', '13:00:00', 'Mumbai', '$today','02:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Mumbai', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Mumbai', '$today', '13:00:00', 'Delhi', '$today','02:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Delhi', '$today', '05:00:00', 'Mumbai', '$today','18:00:00'  ;";
+
+    // R2
+    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B1', '1', 'Hyderabad', '$today', '06:00:00', 'Delhi', '$today','04:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B1', '1', 'Delhi', '$today', '06:00:00', 'Hyderabad', '$today','04:00:00'  ;";
+    // $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    // VALUES ('R1B2', '1', 'Hyderabad', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+
+    // $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    // VALUES ('R1B2', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B2', '1', 'Hyderabad', '$today', '16:00:00', 'Delhi', '$today','14:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B2', '1', 'Delhi', '$today', '16:00:00', 'Hyderabad', '$today','14:00:00'  ;";
+
+    // R3
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R3B1', '1', 'Hyderabad', '$today', '05:00:00', 'Goa', '$today','20:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R3B1', '1', 'Goa', '$today', '22:00:00', 'Hyderabad', '$today','13:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R3B1', '1', 'Hyderabad', '$today', '15:00:00', 'Goa', '$today','06:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R3B1', '1', 'Goa', '$today', '08:00:00', 'Hyderabad', '$today','23:00:00'  ;";
+
+    // R4
+    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Hyderabad', '$today', '08:00:00', 'Chennai', '$today','20:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Chennai', '$today', '22:00:00', 'Hyderabad', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Hyderabad', '$today', '12:00:00', 'Chennai', '$today','00:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Chennai', '$today', '08:00:00', 'Hyderabad', '$today','20:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Hyderabad', '$today', '22:00:00', 'Chennai', '$today','10:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Chennai', '$today', '12:00:00', 'Hyderabad', '$today','00:00:00'  ;";
+
+    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Hyderabad', '$today', '17:00:00', 'Chennai', '$today','05:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Chennai', '$today', '07:00:00', 'Hyderabad', '$today','19:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Hyderabad', '$today', '21:00:00', 'Chennai', '$today','09:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Chennai', '$today', '17:00:00', 'Hyderabad', '$today','05:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Hyderabad', '$today', '07:00:00', 'Chennai', '$today','19:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Chennai', '$today', '21:00:00', 'Hyderabad', '$today','09:00:00'  ;";
+
+    // R5
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Hyderabad', '$today', '14:00:00', 'Mumbai', '$today','04:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Mumbai', '$today', '18:00:00', 'Hyderabad', '$today','08:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Hyderabad', '$today', '10:00:00', 'Mumbai', '$today','00:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Mumbai', '$today', '14:00:00', 'Hyderabad', '$today','04:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Hyderabad', '$today', '18:00:00', 'Mumbai', '$today','08:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Mumbai', '$today', '10:00:00', 'Hyderabad', '$today','00:00:00'  ;";
+
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Hyderabad', '$today', '07:00:00', 'Mumbai', '$today','21:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Mumbai', '$today', '23:00:00', 'Hyderabad', '$today','13:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Hyderabad', '$today', '15:00:00', 'Mumbai', '$today','05:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Mumbai', '$today', '07:00:00', 'Hyderabad', '$today','21:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Hyderabad', '$today', '23:00:00', 'Mumbai', '$today','13:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Mumbai', '$today', '15:00:00', 'Hyderabad', '$today','05:00:00'  ;";
+
+    // R6
+    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B1', '1', 'Hyderabad', '$today', '09:00:00', 'Banglore', '$today','19:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B1', '1', 'Banglore', '$today', '21:00:00', 'Hyderabad', '$today','07:00:00'  ;";
+
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B2', '1', 'Hyderabad', '$today', '18:00:00', 'Banglore', '$today','04:00:00'  ;";
+    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B2', '1', 'Banglore', '$today', '6:00:00', 'Hyderabad', '$today','16:00:00'  ;";
     // for revenue table
 
 
     // for each bus seperately
 
-    
+    $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1', 'R5B2', 'R6B1', 'R6B2');
+    foreach ($numbers as $value) {
+        for ($i=1; $i <= 40; $i++) {
+            $sql = "INSERT INTO " . $value . "(tripno, driver, date, seatno, status)
+            VALUES ('') ;";
+        }
+    }
 ?>

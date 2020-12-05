@@ -51,11 +51,13 @@ if ($query) {
 $sql = "CREATE TABLE schedule (
     busno VARCHAR(10) NOT NULL, 
     tripno INT(2) NOT NULL,
-    date INT(8) NOT NULL, -- yyyy-mm-dd 
-    day INT(2) NOT NULL, -- dd is the fromat , its not like 'monday' or 'tuesday'.
+    -- date INT(8) NOT NULL, -- yyyy-mm-dd 
+    -- day INT(2) NOT NULL, -- dd is the format , its not like 'monday' or 'tuesday'.
     fromplace VARCHAR(30) NOT NULL,
+    fromdate int(8) NOT NULL,
     fromtime INT(6) NOT NULL,
     toplace VARCHAR(30) NOT NULL,
+    todate int(8) NOT NULL,
     totime INT(6) NOT NULL
     )";
 $query = mysqli_query($conn, $sql);
@@ -67,9 +69,8 @@ if ($query) {
 
 
 // create Per bus table  --> must be executed with diff names
-$busno = "bus1";
+$busno = "R1B1";
 $sql = "CREATE TABLE $busno (
-    busno VARCHAR(10) NOT NULL, 
     tripno INT(2) NOT NULL,
     driver VARCHAR(30) NOT NULL,
     date INT(8) NOT NULL, -- yyyy-mm-dd 
