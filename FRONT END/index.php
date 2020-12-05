@@ -100,7 +100,7 @@
     <div class="fix">
         <div class="header">
             <div class="log">
-                <img src="logo_2.jpg" width=70px height=70px>
+                <img src="logo_2.png" width=80px height=70px>
             </div>
             <div class="left">
                 <h1>BUS RESERVATION SYSTEM<sup>TM</sup></h1>
