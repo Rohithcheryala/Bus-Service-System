@@ -32,7 +32,11 @@
     vertical-align: middle;
     background-color: powderblue;
 }
+.search{
+    padding:20px 20px;
+    padding-left: 200px;
 
+}
 .topnav{
     overflow: hidden;
     background-color:black;
@@ -87,7 +91,7 @@ button[type=submit],button[type=reset]{
 label{
     margin-top: 10px;
     display: inline-flex;
-    width:250px;
+    width:200px;
 }
 body{
     vertical-align: middle;
