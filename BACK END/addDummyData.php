@@ -49,130 +49,159 @@
 
     // R1
     $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Mumbai', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+    VALUES ('R1B1', '1', 'Mumbai', '2020-12-05', '05:00:00', 'Delhi', '2020-12-06','18:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    VALUES ('R1B1', '1', 'Delhi', '2020-12-06', '21:00:00', 'Mumbai', '2020-12-08','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Mumbai', '$today', '13:00:00', 'Delhi', '$today','02:00:00'  ;";
+    VALUES ('R1B1', '1', 'Mumbai', '2020-12-08', '13:00:00', 'Delhi', '2020-12-10','02:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Delhi', '$today', '05:00:00', 'Mumbai', '$today','18:00:00'  ;";
+    VALUES ('R1B1', '1', 'Delhi', '2020-12-10', '05:00:00', 'Mumbai', '2020-12-11','18:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Mumbai', '$today', '21:00:00', 'Delhi', '$today','10:00:00'  ;";
+    VALUES ('R1B1', '1', 'Mumbai', '2020-12-11', '21:00:00', 'Delhi', '2020-12-13','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B1', '1', 'Delhi', '$today', '13:00:00', 'Mumbai', '$today','02:00:00'  ;";
+    VALUES ('R1B1', '1', 'Delhi', '2020-12-13', '13:00:00', 'Mumbai', '2020-12-15','02:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
-    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Mumbai', '$today', '21:00:00', 'Delhi', '$today','10:00:00'  ;";
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R1B2', '1', 'Mumbai', '2020-12-05', '21:00:00', 'Delhi', '2020-12-07','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Delhi', '$today', '13:00:00', 'Mumbai', '$today','02:00:00'  ;";
+    VALUES ('R1B2', '1', 'Delhi', '2020-12-07', '13:00:00', 'Mumbai', '2020-12-09','02:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Mumbai', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+    VALUES ('R1B2', '1', 'Mumbai', '2020-12-09', '05:00:00', 'Delhi', '2020-12-10','18:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    VALUES ('R1B2', '1', 'Delhi', '2020-12-10', '21:00:00', 'Mumbai', '2020-12-12','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Mumbai', '$today', '13:00:00', 'Delhi', '$today','02:00:00'  ;";
+    VALUES ('R1B2', '1', 'Mumbai', '2020-12-12', '13:00:00', 'Delhi', '2020-12-14','02:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R1B2', '1', 'Delhi', '$today', '05:00:00', 'Mumbai', '$today','18:00:00'  ;";
+    VALUES ('R1B2', '1', 'Delhi', '2020-12-14', '05:00:00', 'Mumbai', '2020-12-15','18:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
     // R2
-    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R2B1', '1', 'Hyderabad', '$today', '06:00:00', 'Delhi', '$today','04:00:00'  ;";
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B1', '1', 'Hyderabad', '2020-12-05', '06:00:00', 'Delhi', '2020-12-06','04:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R2B1', '1', 'Delhi', '$today', '06:00:00', 'Hyderabad', '$today','04:00:00'  ;";
+    VALUES ('R2B1', '1', 'Delhi', '2020-12-06', '06:00:00', 'Hyderabad', '2020-12-07','04:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
     // $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    // VALUES ('R1B2', '1', 'Hyderabad', '$today', '05:00:00', 'Delhi', '$today','18:00:00'  ;";
+    // VALUES ('R1B2', '1', 'Hyderabad', '2020-12-05', '05:00:00', 'Delhi', '2020-12-05','18:00:00'  ;";
 
     // $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    // VALUES ('R1B2', '1', 'Delhi', '$today', '21:00:00', 'Mumbai', '$today','10:00:00'  ;";
+    // VALUES ('R1B2', '1', 'Delhi', '2020-12-05', '21:00:00', 'Mumbai', '2020-12-05','10:00:00'  ;";
+    $sql = "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R2B2', '1', 'Hyderabad', '2020-12-05', '16:00:00', 'Delhi', '2020-12-06','14:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R2B2', '1', 'Hyderabad', '$today', '16:00:00', 'Delhi', '$today','14:00:00'  ;";
-    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R2B2', '1', 'Delhi', '$today', '16:00:00', 'Hyderabad', '$today','14:00:00'  ;";
+    VALUES ('R2B2', '1', 'Delhi', '2020-12-06', '16:00:00', 'Hyderabad', '2020-12-07','14:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
     // R3
+    $sql = "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R3B1', '1', 'Hyderabad', '2020-12-05', '05:00:00', 'Goa', '2020-12-05','20:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R3B1', '1', 'Hyderabad', '$today', '05:00:00', 'Goa', '$today','20:00:00'  ;";
+    VALUES ('R3B1', '2', 'Goa', '2020-12-05', '22:00:00', 'Hyderabad', '2020-12-06','13:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R3B1', '1', 'Goa', '$today', '22:00:00', 'Hyderabad', '$today','13:00:00'  ;";
+    VALUES ('R3B1', '1', 'Hyderabad', '2020-12-06', '15:00:00', 'Goa', '2020-12-07','06:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R3B1', '1', 'Hyderabad', '$today', '15:00:00', 'Goa', '$today','06:00:00'  ;";
-    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R3B1', '1', 'Goa', '$today', '08:00:00', 'Hyderabad', '$today','23:00:00'  ;";
+    VALUES ('R3B1', '1', 'Goa', '2020-12-07', '08:00:00', 'Hyderabad', '2020-12-07','23:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
     // R4
-    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Hyderabad', '$today', '08:00:00', 'Chennai', '$today','20:00:00'  ;";
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B1', '1', 'Hyderabad', '2020-12-05', '08:00:00', 'Chennai', '2020-12-05','20:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Chennai', '$today', '22:00:00', 'Hyderabad', '$today','10:00:00'  ;";
+    VALUES ('R4B1', '2', 'Chennai', '2020-12-05', '22:00:00', 'Hyderabad', '2020-12-06','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Hyderabad', '$today', '12:00:00', 'Chennai', '$today','00:00:00'  ;";
+    VALUES ('R4B1', '1', 'Hyderabad', '2020-12-06', '12:00:00', 'Chennai', '2020-12-07','00:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Chennai', '$today', '08:00:00', 'Hyderabad', '$today','20:00:00'  ;";
+    VALUES ('R4B1', '1', 'Chennai', '2020-12-07', '08:00:00', 'Hyderabad', '2020-12-07','20:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Hyderabad', '$today', '22:00:00', 'Chennai', '$today','10:00:00'  ;";
+    VALUES ('R4B1', '2', 'Hyderabad', '2020-12-07', '22:00:00', 'Chennai', '2020-12-08','10:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B1', '1', 'Chennai', '$today', '12:00:00', 'Hyderabad', '$today','00:00:00'  ;";
+    VALUES ('R4B1', '1', 'Chennai', '2020-12-08', '12:00:00', 'Hyderabad', '2020-12-09','00:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
-    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Hyderabad', '$today', '17:00:00', 'Chennai', '$today','05:00:00'  ;";
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R4B2', '1', 'Hyderabad', '2020-12-05', '17:00:00', 'Chennai', '2020-12-06','05:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Chennai', '$today', '07:00:00', 'Hyderabad', '$today','19:00:00'  ;";
+    VALUES ('R4B2', '1', 'Chennai', '2020-12-06', '07:00:00', 'Hyderabad', '2020-12-06','19:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Hyderabad', '$today', '21:00:00', 'Chennai', '$today','09:00:00'  ;";
+    VALUES ('R4B2', '2', 'Hyderabad', '2020-12-06', '21:00:00', 'Chennai', '2020-12-07','09:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Chennai', '$today', '17:00:00', 'Hyderabad', '$today','05:00:00'  ;";
+    VALUES ('R4B2', '1', 'Chennai', '2020-12-07', '17:00:00', 'Hyderabad', '2020-12-07','05:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Hyderabad', '$today', '07:00:00', 'Chennai', '$today','19:00:00'  ;";
+    VALUES ('R4B2', '2', 'Hyderabad', '2020-12-07', '07:00:00', 'Chennai', '2020-12-08','19:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R4B2', '1', 'Chennai', '$today', '21:00:00', 'Hyderabad', '$today','09:00:00'  ;";
+    VALUES ('R4B2', '1', 'Chennai', '2020-12-08', '21:00:00', 'Hyderabad', '2020-12-08','09:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
     // R5
+    $sql = "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B1', '1', 'Hyderabad', '2020-12-05', '14:00:00', 'Mumbai', '2020-12-06','04:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Hyderabad', '$today', '14:00:00', 'Mumbai', '$today','04:00:00'  ;";
+    VALUES ('R5B1', '1', 'Mumbai', '2020-12-06', '18:00:00', 'Hyderabad', '2020-12-07','08:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Mumbai', '$today', '18:00:00', 'Hyderabad', '$today','08:00:00'  ;";
+    VALUES ('R5B1', '1', 'Hyderabad', '2020-12-07', '10:00:00', 'Mumbai', '2020-12-08','00:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Hyderabad', '$today', '10:00:00', 'Mumbai', '$today','00:00:00'  ;";
+    VALUES ('R5B1', '1', 'Mumbai', '2020-12-08', '14:00:00', 'Hyderabad', '2020-12-09','04:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Mumbai', '$today', '14:00:00', 'Hyderabad', '$today','04:00:00'  ;";
+    VALUES ('R5B1', '1', 'Hyderabad', '2020-12-09', '18:00:00', 'Mumbai', '2020-12-10','08:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Hyderabad', '$today', '18:00:00', 'Mumbai', '$today','08:00:00'  ;";
-    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B1', '1', 'Mumbai', '$today', '10:00:00', 'Hyderabad', '$today','00:00:00'  ;";
+    VALUES ('R5B1', '1', 'Mumbai', '2020-12-10', '10:00:00', 'Hyderabad', '2020-12-11','00:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
+    $sql = "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R5B2', '1', 'Hyderabad', '2020-12-05', '07:00:00', 'Mumbai', '2020-12-05','21:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Hyderabad', '$today', '07:00:00', 'Mumbai', '$today','21:00:00'  ;";
+    VALUES ('R5B2', '2', 'Mumbai', '2020-12-05', '23:00:00', 'Hyderabad', '2020-12-06','13:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Mumbai', '$today', '23:00:00', 'Hyderabad', '$today','13:00:00'  ;";
+    VALUES ('R5B2', '1', 'Hyderabad', '2020-12-06', '15:00:00', 'Mumbai', '2020-12-07','05:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Hyderabad', '$today', '15:00:00', 'Mumbai', '$today','05:00:00'  ;";
+    VALUES ('R5B2', '1', 'Mumbai', '2020-12-07', '07:00:00', 'Hyderabad', '2020-12-07','21:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Mumbai', '$today', '07:00:00', 'Hyderabad', '$today','21:00:00'  ;";
+    VALUES ('R5B2', '2', 'Hyderabad', '2020-12-07', '23:00:00', 'Mumbai', '2020-12-08','13:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Hyderabad', '$today', '23:00:00', 'Mumbai', '$today','13:00:00'  ;";
-    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R5B2', '1', 'Mumbai', '$today', '15:00:00', 'Hyderabad', '$today','05:00:00'  ;";
+    VALUES ('R5B2', '1', 'Mumbai', '2020-12-08', '15:00:00', 'Hyderabad', '2020-12-09','05:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
     // R6
-    $sql .= "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R6B1', '1', 'Hyderabad', '$today', '09:00:00', 'Banglore', '$today','19:00:00'  ;";
+    $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B1', '1', 'Hyderabad', '2020-12-05', '09:00:00', 'Banglore', '2020-12-05','19:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R6B1', '1', 'Banglore', '$today', '21:00:00', 'Hyderabad', '$today','07:00:00'  ;";
+    VALUES ('R6B1', '2', 'Banglore', '2020-12-05', '21:00:00', 'Hyderabad', '2020-12-06','07:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
 
+    $sql = "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
+    VALUES ('R6B2', '1', 'Hyderabad', '2020-12-05', '18:00:00', 'Banglore', '2020-12-06','04:00:00'  ;";
     $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R6B2', '1', 'Hyderabad', '$today', '18:00:00', 'Banglore', '$today','04:00:00'  ;";
-    $sql .= "INSERT INTO schedule (cardno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
-    VALUES ('R6B2', '1', 'Banglore', '$today', '6:00:00', 'Hyderabad', '$today','16:00:00'  ;";
+    VALUES ('R6B2', '1', 'Banglore', '2020-12-06', '06:00:00', 'Hyderabad', '2020-12-06','16:00:00'  ;";
+    $query = mysqli_multi_query($conn, $sql);
+
     // for revenue table
 
 
     // for each bus seperately
 
-    $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1', 'R5B2', 'R6B1', 'R6B2');
-    foreach ($numbers as $value) {
-        for ($i=1; $i <= 40; $i++) {
-            $sql = "INSERT INTO " . $value . "(tripno, driver, date, seatno, status)
-            VALUES ('') ;";
-        }
+    //R1B1
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-05', '$i', '0') ;";
     }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    // $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1', 'R5B2', 'R6B1', 'R6B2');
+    // foreach ($numbers as $value) {
+    //     for ($i=1; $i <= 40; $i++) {
+    //         $sql = "INSERT INTO " . $value . "(tripno, driver, date, seatno, status)
+    //         VALUES ('1', '', '', '$i', '0') ;";
+    //     }
+    // }
 ?>

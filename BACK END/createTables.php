@@ -54,10 +54,10 @@ $sql = "CREATE TABLE schedule (
     -- date INT(8) NOT NULL, -- yyyy-mm-dd 
     -- day INT(2) NOT NULL, -- dd is the format , its not like 'monday' or 'tuesday'.
     fromplace VARCHAR(30) NOT NULL,
-    fromdate int(8) NOT NULL,
+    fromdate INT(8) NOT NULL,
     fromtime INT(6) NOT NULL,
     toplace VARCHAR(30) NOT NULL,
-    todate int(8) NOT NULL,
+    todate INT(8) NOT NULL,
     totime INT(6) NOT NULL
     )";
 $query = mysqli_query($conn, $sql);
@@ -69,20 +69,36 @@ if ($query) {
 
 
 // create Per bus table  --> must be executed with diff names
-$busno = "R1B1";
-$sql = "CREATE TABLE $busno (
-    tripno INT(2) NOT NULL,
-    driver VARCHAR(30) NOT NULL,
-    date INT(8) NOT NULL, -- yyyy-mm-dd 
-    seatno INT(2) NOT NULL,
-    status INT(1) NOT NULL
-    )";
-$query = mysqli_query($conn, $sql);
-if ($query) {
-    echo 1;
-  } else {
-    echo mysqli_error($conn);
-  }
+$numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1', 'R5B2', 'R6B1', 'R6B2');
+    foreach ($numbers as $value) {
+      $sql = "CREATE TABLE $value (
+        tripno INT(2) NOT NULL,
+        driver VARCHAR(30) NOT NULL,
+        date INT(8) NOT NULL, -- yyyy-mm-dd 
+        seatno INT(2) NOT NULL,
+        status INT(1) NOT NULL
+        )";
+        $query = mysqli_query($conn, $sql);
+        if ($query) {
+            echo 1;
+          } else {
+            echo mysqli_error($conn);
+          }
+    }
+// $busno = "R1B1";
+// $sql = "CREATE TABLE $busno (
+//     tripno INT(2) NOT NULL,
+//     driver VARCHAR(30) NOT NULL,
+//     date INT(8) NOT NULL, -- yyyy-mm-dd 
+//     seatno INT(2) NOT NULL,
+//     status INT(1) NOT NULL
+//     )";
+// $query = mysqli_query($conn, $sql);
+// if ($query) {
+//     echo 1;
+//   } else {
+//     echo mysqli_error($conn);
+//   }
 
 
 // create revenue table
@@ -105,11 +121,14 @@ if ($query) {
 // create transaction table
 $sql = "CREATE TABLE transaction(
     transactionID INT(8) NOT NULL,
+    cardno INT(8) NOT NULL,
     busno VARCHAR(10) NOT NULL,
     tripno INT(2) NOT NULL,
     seatno INT(2) NOT NULL,
     fromplace VARCHAR(30) NOT NULL,
-    toplace VARCHAR(30) NOT NULL)";
+    toplace VARCHAR(30) NOT NULL)
+    fromdate INT(8) NOT NULL,;";
+    
 $query = mysqli_query($conn, $sql);
 if ($query) {
   echo 1;
