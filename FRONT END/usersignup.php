@@ -147,7 +147,7 @@
     <br><br><br><br><br><br><br><br><br>
     &emsp;
 
-    <div class="flonext" style="margin-left: 450px;padding-left: 60px;padding-right: 70px;width:20%">
+    <div class="flonext" style="margin-left: 340px;padding-left: 90px;padding-right: 0px;width:45%">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 
             <h4>Sign up </h4>
