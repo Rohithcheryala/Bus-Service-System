@@ -142,9 +142,6 @@
         </div>
         <div class="topnav">
             <a class="active">Home</a>
-            <a>Item2</a>
-            <a>Item3</a>
-            <a class="logout">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
@@ -155,23 +152,23 @@
 
             <h4>Sign up </h4>
             <input type="text" name="type" id="type" value="user" class="hidden" readonly>
-            <label for="fname">First Name</label>
+            <label class="custom" for="fname">First Name</label>
             <input type="text" name="fname" id="fname" required><br>
             <span class="error" id="fnameErr">* <?php echo $fnameErr; ?></span><br>
 
-            <label for="lname">Last Name</label>
+            <label class="custom" for="lname">Last Name</label>
             <input type="text" name="lname" id="lname" required><br>
             <span class="error" id="lnameErr">* <?php echo $lnameErr; ?></span><br>
 
-            <label for="email">Email</label>
+            <label class="custom" for="email">Email</label>
             <input type="email" name="email" id="email" required><br>
             <span class="error" id="emailErr">* <?php echo $emailErr; ?></span><br>
 
-            <label for="password">Password</label>
+            <label class="custom" for="password">Password</label>
             <input type="password" name="password" id="password" required><br><br>
             <span class="error" id="passwordErr">* <?php echo $passwordErr; ?></span><br>
 
-            <label for="phno">Phone</label>
+            <label class="custom" for="phno">Phone</label>
             <input type="number" name="phno" id="phno" required><br>
             <span class="error" id="phnoErr">* <?php echo $phnoErr; ?></span><br>
 

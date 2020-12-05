@@ -1,0 +1,136 @@
+.fix{
+    position:fixed;
+    width:100%;
+    background-color: whitesmoke;
+}
+.header{
+    padding:10px 10px;
+}
+.log{
+    float:left;
+    padding:0px 30px;
+}
+.left{
+    float:left;
+    padding : 0px 150px;
+}
+.floleft{
+    float:left;
+    min-height:400px;
+    width : 60%;
+    border-radius:10px;
+    padding: 20px 50px;
+}
+
+.flonext{
+    padding:20px 20px;
+    margin-left: 30px;
+    float:left;
+    min-height: 400px;
+    width:25%;    
+    border-radius: 10px;
+    vertical-align: middle;
+    background-color: powderblue;
+}
+.search{
+    padding:20px 20px;
+    padding-left: 200px;
+
+}
+.topnav{
+    overflow: hidden;
+    background-color:black;
+    float:left;
+    border-radius:30px;
+    width:80%;
+    padding:4px 10%;
+}
+
+.topnav a{
+    float:left;
+    background-color: black;
+    border:none;
+    color:ghostwhite;
+    padding:10px 30px;
+    font-size:17px;
+    text-align:center;
+    border-radius:30px;
+
+}
+.topnav a.logout{
+    float:right;
+}
+.topnav a.active{
+    background-color: blue;
+}
+
+.topnav a:hover{
+    background-color: darkgray ;
+    color:white;
+}
+
+
+input{
+    border-radius:8px;
+    border-color:steelblue;
+    padding:0px 10px;
+    background-color: ghostwhite;
+}
+button[type=submit],button[type=reset]{
+
+    border-radius:30px;
+    border :none;
+    font-size: 17px;
+    margin : 10px 0px;
+    padding : 1px 20px;
+    background-color:darkblue;
+    color:white;
+    
+
+}
+label .custom{
+    margin-top: 10px;
+    display: inline-flex;
+    width:200px;
+}
+body{
+    vertical-align: middle;
+    background-color: whitesmoke;
+
+}
+
+.bus{
+    background-color:azure;
+    border-radius:30px;
+    border:1px solid black;
+    width:40%;
+    padding:15px 100px;
+    margin:15px 150px;
+
+}
+
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  color: black;
+  background-color: white;
+  margin: 5px 10px;
+  border-radius :5px;
+}
+input[type="checkbox"]:disabled+label{
+    background-color: gray;
+    cursor:not-allowed;
+}
+input[type="checkbox"]:checked + label {
+  border: 1px solid black;
+  color: black;
+  background-color: #00ff00;
+}

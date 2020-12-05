@@ -108,9 +108,6 @@
         </div>
         <div class="topnav">
             <a class="active">Home</a>
-            <a>Item2</a>
-            <a>Item3</a>
-            <a class="logout">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
@@ -125,11 +122,11 @@
             <div id="loginform" class="">
                 <input type="text" name="type" id="type" value="user" class="hidden" readonly>
                 
-                <label for="cardno">Card Number</label>
+                <label class="custom" for="cardno">Card Number</label>
                 <input type="number" name="cardno" id="cardno" required>
                 <span class="error" id="cardnoErr">* <?php echo $cardnoErr; ?></span><br>
 
-                <label for="password">Password</label>
+                <label class="custom" for="password">Password</label>
                 <input type="password" name="password" id="password" required>
                 <span class="error" id="passwordErr">* <?php echo $passwordErr; ?></span><br>
 
