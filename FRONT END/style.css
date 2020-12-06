@@ -73,7 +73,7 @@
 input{
     border-radius:8px;
     border-color:steelblue;
-    padding:3px 10px;
+    padding:0px 10px;
     background-color: ghostwhite;
 }
 button[type=submit],button[type=reset]{
@@ -88,7 +88,7 @@ button[type=submit],button[type=reset]{
     
 
 }
-.custom{
+label .custom{
     margin-top: 10px;
     display: inline-flex;
     width:200px;
@@ -133,4 +133,16 @@ input[type="checkbox"]:checked + label {
   border: 1px solid black;
   color: black;
   background-color: #00ff00;
+}
+
+table,th,td{
+    margin: 10px 150px;
+    border:1px solid black;
+    border-collapse: collapse;
+    padding:5px 15px;
+    min-width: 150px;
+}
+
+th{
+    background-color: goldenrod;
 }
