@@ -88,7 +88,7 @@
                                 <td>" . $row["toplace"] . "</td>
                                 <td>" . $row["totime"] . "</td>
                              </tr>";
-                    $time += "<option value=".$row["fromtime"].">"
+                    $time += "<option value=".$row["fromtime"].">";
                 }
             ?>
                 <html>
