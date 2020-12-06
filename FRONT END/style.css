@@ -69,7 +69,6 @@
     color:white;
 }
 
-
 input{
     border-radius:8px;
     border-color:steelblue;
@@ -88,7 +87,8 @@ button[type=submit],button[type=reset]{
     
 
 }
-label .custom{
+
+.custom{
     margin-top: 10px;
     display: inline-flex;
     width:200px;

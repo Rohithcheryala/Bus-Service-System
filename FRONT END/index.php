@@ -28,7 +28,7 @@
         $username = "root";
         $password = "";
         $db = "bssdb";
-        ob_start();
+        
 
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $db);
@@ -68,8 +68,9 @@
             $rows = mysqli_num_rows($query);
             if ($rows == 1) {
                 // go to respective home page
-                header("Location: userfirstpage.php");
                 $_SESSION['cardno'] = $cardno;
+                header("Location: userfirstpage.php");
+                
                 
             } else {
                 $Err = "card number or password is incorrect";
@@ -113,8 +114,8 @@
     <br><br><br><br><br><br><br><br><br>
     &emsp;
     <div class="floleft">
-        <p>This is basic project demonstration by team PHOENIX</p>
-        <p>To fall along please login.</p>
+        <h2><p>This is basic project demonstration by team PHOENIX</p>
+        <p>To fall along please login.</p></h2>
     </div>
     <div class="flonext" id=""><br><br>
         <h3>LOGIN</h3>
@@ -132,6 +133,11 @@
 
                 <span class="error" id="Err"> <?php echo $Err; ?></span><br>
                 <button type="submit" value="Submit">LOGIN</button>
+
+                <br><br>
+                <p>
+                    Not a user <a href="usersignup.php">sign up</a>
+                </p>
             </div>
         </form>
     </div>

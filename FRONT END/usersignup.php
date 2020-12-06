@@ -13,8 +13,6 @@
 <body>
 <?php
     ob_start();
-    session_start();
-    $_SESSION['cardno'] = "";
     $Err = "card number or password is incorrect";
     
     // define variables and set to empty values
@@ -119,6 +117,7 @@
             $sql = "INSERT INTO user(cardno,password,firstname,lastname,email,phno,balance)
             VALUES ('$cardno', '$password', '$fname', '$lname', '$email', '$phno', '10000') ;";
             $query = mysqli_query($conn, $sql);
+            header("Location:index.php");
         }
     }
 
@@ -141,7 +140,7 @@
             </div>
         </div>
         <div class="topnav">
-            <a class="active">Home</a>
+            <a class="active" href="index.php">Home</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
