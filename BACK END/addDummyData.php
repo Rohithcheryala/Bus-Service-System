@@ -76,6 +76,7 @@
     VALUES ('R1B2', '1', 'Delhi', '2020-12-14', '05:00:00', 'Mumbai', '2020-12-15','18:00:00'  ;";
     $query = mysqli_multi_query($conn, $sql);
 
+    
     // R2
     $sql = "INSERT INTO schedule (busno, tripno, fromplace, fromdate, fromtime, toplace, todate, totime)
     VALUES ('R2B1', '1', 'Hyderabad', '2020-12-05', '06:00:00', 'Delhi', '2020-12-06','04:00:00'  ;";
@@ -197,6 +198,340 @@
     }
     $query = mysqli_multi_query($conn, $sql);
 
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-08', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-08', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-10', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-10', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-11', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-11', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-13', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-13', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+
+    //R1B2
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-09', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-09', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-10', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-10', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kyle', '2020-12-12', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kyle', '2020-12-12', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'John', '2020-12-14', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'John', '2020-12-14', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+
+    //R2B1
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Madhu', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Madhu', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Sri', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Sri', '2020-12-06', '$i', '0') ;";
+    }
+    // to be added many more times!!!
+
+
+    //R2B2
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Ram', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Ram', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Krishna', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Krishna', '2020-12-06', '$i', '0') ;";
+    }
+
+
+    //R3B1
+    $sql = "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Mohan', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Mohan', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Ishith', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Ishith', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Mohan', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Mohan', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Ishith', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Ishith', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+
+    //R4B1
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-08', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-08', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+
+    //R4B2
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Kannayya', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Kannayya', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Praveen', '2020-12-08', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Praveen', '2020-12-08', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    //R5B1
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Manohar', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Manohar', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Vishnu', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Vishnu', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Manohar', '2020-12-07', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Manohar', '2020-12-07', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+    
+    //R5B2
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Manoj', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Manoj', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Arjun', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Arjun', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Manoj', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R5B1 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Manoj', '2020-12-06', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    //R6B1
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Ankit', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Ankit', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Dheeraj', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Dheeraj', '2020-12-05', '$i', '0') ;";
+    }
+    // to be added many more times!!!
+
+
+    //R6B2
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Mahesh', '2020-12-05', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Mahesh', '2020-12-05', '$i', '0') ;";
+    }
+    $query = mysqli_multi_query($conn, $sql);
+
+    $sql = "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+    VALUES ('1', 'Rajesh', '2020-12-06', '1', '0') ;";
+    for ($i=2; $i <= 40; $i++) {
+        $sql .= "INSERT INTO R1B2 (tripno, driver, date, seatno, status)
+                VALUES ('1', 'Rajesh', '2020-12-06', '$i', '0') ;";
+    }
     // $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1', 'R5B2', 'R6B1', 'R6B2');
     // foreach ($numbers as $value) {
     //     for ($i=1; $i <= 40; $i++) {
