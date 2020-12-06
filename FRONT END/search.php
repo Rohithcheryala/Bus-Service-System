@@ -13,7 +13,7 @@
 <body>
     <?php
     ob_start();
-
+    session_start();
     $fromplaceErr = $toplaceErr = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
