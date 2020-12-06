@@ -134,3 +134,15 @@ input[type="checkbox"]:checked + label {
   color: black;
   background-color: #00ff00;
 }
+
+table,th,td{
+    margin: 10px 150px;
+    border:1px solid black;
+    border-collapse: collapse;
+    padding:5px 15px;
+    min-width: 150px;
+}
+
+th{
+    background-color: goldenrod;
+}
