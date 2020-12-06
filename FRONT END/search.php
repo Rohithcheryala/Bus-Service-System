@@ -13,9 +13,6 @@
 <body>
     <?php
     ob_start();
-    session_start();
-    $_SESSION['cardno'] = "";
-
 
     $fromplaceErr = $toplaceErr = "";
 
