@@ -83,6 +83,7 @@
             $rows = mysqli_num_rows($query);
             if ($rows != 0) {
                 $str = "";
+                $time = "";
                 while ($row = mysqli_fetch_row($result)) {
                     $str += "<tr>
                                 <td>" . $row["fromplace"] . "</td>
@@ -90,11 +91,13 @@
                                 <td>" . $row["toplace"] . "</td>
                                 <td>" . $row["totime"] . "</td>
                              </tr>";
+                    $time += "<option value=".$row["fromtime"].">"
                 }
             ?>
                 <html>
                 <script>
                     document.getElementById("data").innerHTML = <?php '$str' ?>
+                    document.getElementById("buses").innerHTML=<?php '$time'?>
                 </script>
 
                 </html>
@@ -160,15 +163,21 @@
     <table style="width:100%">
         <tr>
             <th>From</th>
-            <th>Start time</th>
-            <th>to</th>
+            <th>Departure time</th>
+            <th>To</th>
             <th>Reaching time</th>
         </tr>
         <div id="data">
 
         </div>
-
+        
     </table>
+    <form action="bus.php" method="post">
+        <label class="custom" for="buses">Select bus time</label>
+        <datalist id="buses">
+        </datalist>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
