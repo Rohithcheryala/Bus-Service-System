@@ -7,6 +7,45 @@
 </head>
 
 <body>
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "bssdb";
+    $conn = mysqli_connect($servername, $username, $password, $db);
+
+    // $busno = $_POST['busno'];
+    // $date = $_POST['date'];
+    // $tripno = $_POST['tripno'];
+    // $fromplace = $_POST["fromplace"];
+    // $fromtime = $_POST["fromtime"];
+    // $toplace = $_POST["toplace"];
+    $busno = 'R1B1';
+    $date = '2020-12-05';
+    $tripno = 1;
+
+    $str = "";
+    $sql = "SELECT seatno, status
+            FROM " . $busno . "
+            WHERE date = " . $date . " AND tripno = " . $tripno . " ;"; //todo order by must be added 
+    echo $sql;
+    $query = mysqli_query($conn, $sql);
+    for ($row = 1; $row = 10; $row++) {
+        for ($no = 1; $no = 4; $no++) {
+            $seatno = $row * 4 + $no;
+            $row = mysqli_fetch_row($query);
+            echo $row;
+            // if ($row[1] == 1){
+            //     $str .= "<input type='checkbox' id='$seatno' name='$seatno' disabled unchecked>
+            //                 <label for='$seatno>'$seatno'</label>";
+            // } else {
+            //     $str .= "<input type='checkbox' id='$seatno' name='$seatno' >
+            //                 <label for='$seatno>'$seatno'</label>";
+            // }
+            // $str .= "<br>";
+        }
+    }
+    ?>
     <div class="fix">
         <div class="header">
             <div class="log">
@@ -29,43 +68,12 @@
             <div class="bus">
                 <h3 style="margin:5px 100px">FRONT </h4>
                     <div id="data">
-                        <?php
-                        $servername = "localhost";
-                        $username = "root";
-                        $password = "";
-                        $db = "bssdb";
-                        $conn = mysqli_connect($servername, $username, $password, $db);
 
-                        $busno = $_POST['busno'];
-                        $date = $_POST['date'];
-                        $tripno = $_POST['tripno'];
-                        $fromplace = $_POST["fromplace"];
-                        $fromtime = $_POST["fromtime"];
-                        $toplace = $_POST["toplace"];
-                        $str = "";
-                        $sql = "SELECT seatno, status
-                        FROM '$busno'
-                        WHERE date = " . $date . " tripno " . $tripno . " ;";
-                        $query = mysqli_query($conn, $sql);
-                        for ($row = 1; $row = 10; $row++) {
-                            for ($no = 1; $no = 4; $no++) {
-                                $seatno = $row * 4 + $no;
-                                $row = mysqli_fetch_row($query);
-                                if ($row[1] == 1) {
-                                    $str += "<input type='checkbox' id='$seatno' name='$seatno' disabled unchecked>
-                            <label for='$seatno>'$seatno'</label>";
-                                } else {
-                                    $str += "<input type='checkbox' id='$seatno' name='$seatno' >
-                            <label for='$seatno>'$seatno'</label>";
-                                }
-                                $str += "<br>";
-                            }
-                        }
-                        ?>
-                        <script>
-                            document.getElementById(data).innerHTML = <?php $str ?>
-                        </script>
+                        
                     </div>
+                    <script>
+                        document.getElementById("data").innerHTML = "<?php echo $str; ?>";
+                    </script>
                     <!-- <input type="checkbox" id="1" disabled unchecked>
                     <label for="1">1</label>
 

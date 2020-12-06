@@ -51,19 +51,20 @@ if ($query) {
 $sql = "CREATE TABLE schedule (
     busno VARCHAR(10) NOT NULL, 
     tripno INT(2) NOT NULL,
-    -- date INT(8) NOT NULL, -- yyyy-mm-dd 
+    -- date DATE NOT NULL, -- yyyy-mm-dd 
     -- day INT(2) NOT NULL, -- dd is the format , its not like 'monday' or 'tuesday'.
     fromplace VARCHAR(30) NOT NULL,
-    fromdate INT(8) NOT NULL,
-    fromtime INT(6) NOT NULL,
+    fromdate DATE NOT NULL,
+    fromtime TIME NOT NULL,
     toplace VARCHAR(30) NOT NULL,
-    todate INT(8) NOT NULL,
-    totime INT(6) NOT NULL
+    todate DATE NOT NULL,
+    totime TIME NOT NULL
     )";
 $query = mysqli_query($conn, $sql);
 if ($query) {
     echo 1;
   } else {
+    echo "sch";
     echo mysqli_error($conn);
   }
 
@@ -74,7 +75,7 @@ $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1',
       $sql = "CREATE TABLE $value (
         tripno INT(2) NOT NULL,
         driver VARCHAR(30) NOT NULL,
-        date INT(8) NOT NULL, -- yyyy-mm-dd 
+        date DATE NOT NULL, 
         seatno INT(2) NOT NULL,
         status INT(1) NOT NULL
         )";
@@ -82,6 +83,7 @@ $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1',
         if ($query) {
             echo 1;
           } else {
+            echo "prebus";
             echo mysqli_error($conn);
           }
     }
@@ -89,7 +91,7 @@ $numbers = array('R1B1', 'R1B2', 'R2B1', 'R2B2', 'R3B1', 'R4B1', 'R4B2', 'R5B1',
 // $sql = "CREATE TABLE $busno (
 //     tripno INT(2) NOT NULL,
 //     driver VARCHAR(30) NOT NULL,
-//     date INT(8) NOT NULL, -- yyyy-mm-dd 
+//     date DATE NOT NULL, -- yyyy-mm-dd 
 //     seatno INT(2) NOT NULL,
 //     status INT(1) NOT NULL
 //     )";
@@ -108,31 +110,34 @@ $sql = "CREATE TABLE revenue (
     fuel INT(6) NOT NULL, -- lets keep them negative because its outgoing 
     maintenance INT(6) NOT NULL, -- lets keep them negative because its outgoing 
     income INT(2) NOT NULL, -- through tickets
-    date INT(8) NOT NULL -- yyyy-mm-dd 
+    date DATE NOT NULL -- yyyy-mm-dd 
     )";
 $query = mysqli_query($conn, $sql);
 if ($query) {
     echo 1;
   } else {
+    echo "rev";
     echo mysqli_error($conn);
   }
 
 
 // create transaction table
-$sql = "CREATE TABLE transaction(
+$sql = "CREATE TABLE transaction (
     transactionID INT(8) NOT NULL,
     cardno INT(8) NOT NULL,
     busno VARCHAR(10) NOT NULL,
     tripno INT(2) NOT NULL,
     seatno INT(2) NOT NULL,
     fromplace VARCHAR(30) NOT NULL,
-    toplace VARCHAR(30) NOT NULL)
-    fromdate INT(8) NOT NULL,;";
+    toplace VARCHAR(30) NOT NULL,
+    fromdate DATE NOT NULL 
+    )";
     
 $query = mysqli_query($conn, $sql);
 if ($query) {
   echo 1;
   } else {
+    echo "trans";
     echo mysqli_error($conn);
   }
 // closing connection
