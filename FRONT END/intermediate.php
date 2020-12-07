@@ -1,8 +1,8 @@
 <?php
-    $fromplace = "";
-    $toplace = "";
+    $fromplace = "Hyderabad";
+    $toplace = "Delhi";
     $fromtime = "";
-    $date = "";
+    $date = "2020-12-05";
 
     $servername = "localhost";
     $username = "root";
@@ -18,10 +18,12 @@
 
     $sql = "SELECT busno,tripno,fromplace,fromtime,toplace,totime 
             FROM schedule 
-            WHERE fromplace = '$fromplace' AND toplace = '$toplace' AND $date = " . $date . "";
+            WHERE LOWER(fromplace) = LOWER('$fromplace') AND LOWER(toplace) = LOWER('$toplace') AND fromdate = '$date' ;";
+    echo $sql;
     $query = mysqli_query($conn, $sql);
 
     $rows = mysqli_num_rows($query);
+    echo $rows;
     if ($rows == 1) {
         $row = mysqli_fetch_row($query);
         $busno = $row[0];
@@ -29,4 +31,6 @@
         //rediect some where 
         // we got variables
     }
+    echo $busno;
+    echo $tripno;
 ?>

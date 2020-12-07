@@ -140,6 +140,22 @@ if ($query) {
     echo "trans";
     echo mysqli_error($conn);
   }
+
+  
+// create employees
+$sql = "CREATE TABLE employees(
+    employeename VARCHAR(30) NOT NULL,
+    salary INT(6)
+    );";
+$query = mysqli_query($conn, $sql);
+if ($query) {
+  echo 1;
+  } else {
+    echo "trans";
+    echo mysqli_error($conn);
+  }
+
+
 // closing connection
 mysqli_close($conn);
 ?>

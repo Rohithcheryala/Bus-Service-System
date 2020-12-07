@@ -8,12 +8,34 @@
 ob_start();
 session_start();
 
-$servername = "localhost"
-$username = "root"
-$password = ""
-$db="bssdb"
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db="bssdb";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
+$sql = "SELECT * FROM transactions ;";
+$query = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_array($query)) {
+    $transactionID = $row[0];
+    $cardno = $row[1];
+    $busno = $row[2];
+    $tripno = $row[3];
+    $seatno = $row[4];
+    $fromplace = $row[5];
+    $toplace = $row[6];
+    $fromdate = $row[7];
+    $str .= "<tr>
+                <td>'$transactionID'</td>
+                <td>'$cardno'</td>
+                <td>'$busno'</td>
+                <td>'$tripno'</td>
+                <td>'$seatno'</td>
+                <td>'$fromplace'</td>
+                <td>'$toplace'</td>
+                <td>'$fromdate'</td>
+            </tr>";
+}
 ?>
 </head>
 <body>

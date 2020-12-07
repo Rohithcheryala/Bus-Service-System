@@ -8,10 +8,10 @@
 ob_start();
 session_start();
 
-$servername = "localhost"
-$username = "root"
-$password = ""
-$db="bssdb"
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db="bssdb";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
 ?>
