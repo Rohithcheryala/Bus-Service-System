@@ -54,25 +54,11 @@
             </script>
 
             </html>
-        <?php
+        <?ph
         }
 
         if ($fromplaceErr == "" && $toplaceErr == "") {
-            $sql = "SELECT cardno  
-                FROM user  
-                ORDER BY cardno DESC  
-                LIMIT 1;  ";
-            $query = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_row($query);
-            $cardno = $row[0] + 1;
-        ?>
-            <html>
-            <script type="text/javascript">
-                alert(<?php echo "Card Number : '$cardno'"; ?>);
-            </script>
-            <html>
-            <?php
-
+            
             $sql = "SELECT fromplace, toplace, fromtime, totime
             FROM schedule 
             WHERE LOWER(fromplace) = LOWER('$fromplace') AND LOWER(toplace) = LOWER('$toplace') AND fromdate = '$date' ;";
