@@ -27,10 +27,10 @@
         $conn = mysqli_connect($servername, $username, $password, $db);
         $fromplace = $_POST['fplace'];
         $toplace = $_POST['toplace'];
-        $date = $_POST['date'];
+        $date = date('Y-m-d', strtotime($_POST['date']));
 
         if (preg_match("/^([a-zA-Z' ]+)$/", $fromplace)) {
-            $fname = test_input($_POST["fromplace"]);
+            $fname = test_input($_POST["fplace"]);
         } else {
             $fnameErr = "Must contain alphabets  only";
     ?>
@@ -59,7 +59,7 @@
 
         if ($fromplaceErr == "" && $toplaceErr == "") {
             $sql = "SELECT cardno  
-                FROM " . $type . "  
+                FROM user  
                 ORDER BY cardno DESC  
                 LIMIT 1;  ";
             $query = mysqli_query($conn, $sql);
@@ -130,34 +130,34 @@
     <br><br><br><br><br><br><br><br><br>
     <div class="search">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-            <label for="from">From Place</label>
+            <label class="custom" for="from">From Place</label>
             <input type="text" id="from" name="fplace" list="fplaces">
             <datalist id="fplaces">
-                <option value="Mumbai">
-                <option value="Delhi">
-                <option value="Hyderabad">
-                <option value="Goa">
-                <option value="Chennai">
-                <option value="Banglore">
+                <option value="Mumbai" name="Mumbai">
+                <option value="Delhi" name="Delhi">
+                <option value="Hyderabad" name="Hyderabad">
+                <option value="Goa" name="Goa">
+                <option value="Chennai" name="chennai">
+                <option value="Banglore" name="Banglore">
             </datalist>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for="to">To Place</label>
+            <label class="custom" for="to">To Place</label>
             <input type="text" id="to" name="toplace" list="toplaces">
             <datalist id="toplaces">
-                <option value="Mumbai">
-                <option value="Delhi">
-                <option value="Hyderabad">
-                <option value="Goa">
-                <option value="Chennai">
-                <option value="Banglore">
+                <option value="Mumbai" name="Mumbai">
+                <option value="Delhi" name="Delhi">
+                <option value="Hyderabad" name="Hyderabad">
+                <option value="Goa" name="Goa">
+                <option value="Chennai" name="Chennai">
+                <option value="Banglore" name="Banglore">
             </datalist>
             <br>
-            <label for="date">Date</label>
-            <input type="date"><br>
+            <label class="custom" for="date">Date</label>
+            <input type="date" id="date" name="date"><br>
             <button type="submit">search</button>&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="reset">reset</button>
         </form>
     </div>
-    <table style="width:100%">
+    <table style="width:80%">
         <tr>
             <th>From</th>
             <th>Departure time</th>
@@ -169,7 +169,7 @@
         </div>
         
     </table>
-    <form action="bus.php" method="post">
+    <form action="bus.php" method="post" style="margin:200px;">
         <label class="custom" for="buses">Select bus time</label>
         <datalist id="buses">
         </datalist>
