@@ -20,10 +20,12 @@
     // $fromplace = $_POST["fromplace"];
     // $fromtime = $_POST["fromtime"];
     // $toplace = $_POST["toplace"];
-    $busno = 'R1B1';
-    $date = '2020-12-05';
-    $tripno = 1;
-
+    $date = $_SESSION['date'];
+    $tripno = $_POST['tripno'];
+    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE date='.$date.' AND tripno='.$tripno.';");
+    $rowi = mysqli_fetch_row($queryi);
+    $busno = $rowi[0];
+    
     $str = "";
     $sql = "SELECT seatno, status
             FROM " . $busno . "
@@ -34,11 +36,11 @@
             $seatno = $rows * 4 + $no;
             $row = mysqli_fetch_row($query);
             if ($row[1] === 1){
-                $str .= "<input type='checkbox' id='$seatno' name='$seatno' disabled unchecked>
-                            <label for='$seatno>'$seatno'</label>";
+                $str .= "<input style='width:20px;' type='checkbox' id='$seatno' name='$seatno' disabled unchecked>
+                            <label style='display:inline-block;width:20px; for='$seatno>$seatno</label>&nbsp&nbsp&nbsp";
             } else {
-                $str .= "<input type='checkbox' id='$seatno' name='$seatno' >
-                            <label for='$seatno'>'$seatno'</label>";
+                $str .= "<input style='width:20px;' type='checkbox' id='$seatno' name='$seatno' >
+                            <label style='display:inline-block;width:20px;'for='$seatno'>$seatno</label>&nbsp&nbsp&nbsp";
             }
         }
         $str .= "<br>";
@@ -63,9 +65,9 @@
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft" style="margin-left:200px;border:2px solid black;">
-        <form>
+        <form action="intermediate.php" method="POST">
             <div class="bus">
-                <h3 style="margin:5px 100px">FRONT </h4>
+                <h3 style="margin:5px 120px">FRONT </h4>
                     <div id="data">
                     <?php echo $str; ?>
                         
@@ -73,14 +75,14 @@
                     <!-- <script>
                         document.getElementById("data").innerHTML = "<?php echo $str; ?>";
                     </script>  -->
-                    <input type="checkbox" id="1" disabled unchecked>
+                    <!--<input type="checkbox" id="1" disabled unchecked>
                     <label for="1">1</label>
 
                     <input type="checkbox" id="2">
                     <label for="2">2</label> &nbsp&nbsp&nbsp
                     <input type="checkbox" name="seatno" id="3" value="seatno">
                     <label for="3">3</label><br>
-
+                    -->
 
             </div>
             <button type="submit" style="margin: 10px 210px">submit</button>

@@ -26,8 +26,10 @@
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $db);
         $fromplace = $_POST['fplace'];
+        $_SESSION['fromplace']=$fromplace;
         $toplace = $_POST['toplace'];
         $date = date('Y-m-d', strtotime($_POST['date']));
+        $_SESSION['date']=$date
 
         if (preg_match("/^([a-zA-Z' ]+)$/", $fromplace)) {
             $fname = test_input($_POST["fplace"]);
@@ -54,12 +56,11 @@
             </script>
 
             </html>
-        <?ph
+        <?php
         }
-
         if ($fromplaceErr == "" && $toplaceErr == "") {
             
-            $sql = "SELECT fromplace, toplace, fromtime, totime
+            $sql = "SELECT tripno,fromplace, toplace, fromtime, totime
             FROM schedule 
             WHERE LOWER(fromplace) = LOWER('$fromplace') AND LOWER(toplace) = LOWER('$toplace') AND fromdate = '$date' ;";
             $query = mysqli_query($conn, $sql);
@@ -69,10 +70,12 @@
                 $time = "";
                 while ($row = mysqli_fetch_row($result)) {
                     $str += "<tr>
+                                <td>".$row["tripno"]."</td>
                                 <td>" . $row["fromplace"] . "</td>
                                 <td>" . $row["fromtime"] . "</td>
                                 <td>" . $row["toplace"] . "</td>
                                 <td>" . $row["totime"] . "</td>
+                                <td><input type='radio' name='tripno' value=".$row["tripno"]."></td>
                              </tr>";
                     $time += "<option value=".$row["fromtime"].">";
                 }
@@ -143,22 +146,22 @@
             <button type="reset">reset</button>
         </form>
     </div>
-    <table style="width:80%">
+    <form action="bus.php" method="post" style="margin:0px 150px;">
+    <table style="width:60%;margin:0px;">
         <tr>
+            <th>Trip no</th>
             <th>From</th>
             <th>Departure time</th>
             <th>To</th>
             <th>Reaching time</th>
+            <th>Selection</th>
         </tr>
         <div id="data">
 
         </div>
         
     </table>
-    <form action="bus.php" method="post" style="margin:200px;">
-        <label class="custom" for="buses">Select bus time</label>
-        <datalist id="buses">
-        </datalist>
+    
         <button type="submit">Submit</button>
     </form>
 </body>
