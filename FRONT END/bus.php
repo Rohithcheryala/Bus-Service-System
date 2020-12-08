@@ -8,6 +8,10 @@
 
 <body>
     <?php
+
+    ob_start();
+    session_start();
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -24,7 +28,7 @@
     $tripno = $_POST['tripno'];
     $from = $_SESSION['fromplace'];
     $to = $_SESSION['toplace'];
-    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE fromdate='.$date.' AND tripno='.$tripno.' AND fromplace='.$from.' AND toplace='.$to.';");
+    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE fromdate='.$date.' AND tripno='.$tripno.' AND fromplace='.($from.' AND toplace='.$to.';");
     $rowi = mysqli_fetch_row($queryi);
     $busno = $rowi[0];
     
