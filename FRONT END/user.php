@@ -14,6 +14,29 @@
     $db = "bssdb";
 
     $conn = mysqli_connect($servername, $username, $password, $db);
+    $sql = "SELECT * FROM user ;";
+    $query = mysqli_query($conn, $sql);
+    $str = "";
+    $str .= "<tr>
+                <th>Card number</th>
+                <th>Password</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Balance</th>
+            </tr>";
+    while ($row = mysqli_fetch_row($query)) {
+        $str .= "<tr>
+                    <td>" . $row[0] . "</td>
+                    <td>" . $row[1] . "</td>
+                    <td>" . $row[2] . "</td>
+                    <td>" . $row[3] . "</td>
+                    <td>" . $row[4] . "</td>
+                    <td>" . $row[5] . "</td>
+                    <td>" . $row[6] . "</td>
+                </tr>";
+    }
     ?>
 </head>
 
@@ -38,7 +61,7 @@
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft">
-
+        <?php echo $str; ?>
     </div>
 </body>
 
