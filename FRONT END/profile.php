@@ -8,6 +8,9 @@
 
 <body>
     <?php
+    ob_start();
+    session_start();
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -22,7 +25,7 @@
     }
 
 
-    $cardno = "120001";
+    $cardno = $_SESSION['cardno'];
     $sql = "SELECT password,firstname,lastname,email,phno,balance
                         FROM user 
                         WHERE cardno = " . $cardno . "";
@@ -39,17 +42,34 @@
     // echo $firstname . " " . $lastname . " " . $email . " " . $phno . " " . $balance . " " . $password;
     $str = "";
     // echo "1-".$str;
-    $str .= "<h3>User Profile</h3>
-            <p>First Name</p>
-            <p>'$firstname'</p>
-            <p>Last Name</p>
-            <p>'$lastname'</p>
-            <p>Email</p>
-            <p>'$email'</p>
-            <p>Phone Number</p>
-            <p> " . "{$phno}" . "</p>
-            <p>Balance</p> 
-            <p> " . "{$balance}" . "</p>";
+    $str .= "<h3 style='margin:10px 250px;'>User Profile</h3>
+            
+            <table>
+            <tr>
+                <td>Card No</td>
+                <td>$cardno</td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td>$firstname</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>$lastname</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>$email</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>" . "{$phno}" . "</td>
+            </tr>
+            <tr>
+                <td>Balance</td> 
+                <td>" . "{$balance}" . "</td>
+            </tr>
+            </table>";
     // echo $str;
 
     ?>
@@ -70,14 +90,14 @@
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br> 
-    <div class="floleft" id="dat">
+    <div class="floleft" id="dat"style="margin:10px 250px;">
     <br><br><br>
-        
+        <?php echo $str; ?>
     </div>
     <script>
         var data = '<?php echo $str; ?>';
         alert("ok");
-        document.getElementById("dat").innerHTML = "okkk";
+        document.getElementById("dat").innerHTML = data;
     </script>
 </body>
 
