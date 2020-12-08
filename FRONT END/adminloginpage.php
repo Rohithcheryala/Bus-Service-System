@@ -118,7 +118,7 @@
         <p>To fall along please login.</p></h2>
     </div>
     <div class="flonext" id=""><br><br>
-        <h3>LOGIN</h3>
+        <h3>ADMIN LOGIN</h3>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div id="loginform" class="">
                 <input type="text" name="type" id="type" value="admin" class="hidden" readonly>

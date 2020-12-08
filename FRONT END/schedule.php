@@ -62,8 +62,8 @@
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
-    <div class="floleft">
-        <table>
+    <div class="floleft" style="padding:20px 0px;">
+        <table style="margin:10px 0px;width:400px;">
             <?php echo $str; ?>
         </table>
     </div>

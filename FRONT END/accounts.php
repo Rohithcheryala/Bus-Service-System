@@ -59,7 +59,7 @@
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft">
-        <table>
+        <table style="margin:10px 80px;">
             <?php echo $str; ?>
         </table>
     </div>

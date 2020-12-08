@@ -69,8 +69,8 @@ while ($row = mysqli_fetch_row($query)) {
     </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
-    <div class="floleft">
-        <table>
+    <div class="floleft" style="padding:20px 0px">
+        <table style="margin:10px 10px;">
             <?php echo $str; ?>
         </table>
     </div>
