@@ -28,6 +28,7 @@
         $fromplace = $_POST['fplace'];
         $_SESSION['fromplace']=$fromplace;
         $toplace = $_POST['toplace'];
+        $_SESSION['toplace']=$toplace;
         $date = date('Y-m-d', strtotime($_POST['date']));
         $_SESSION['date']=$date
 

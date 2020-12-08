@@ -22,7 +22,9 @@
     // $toplace = $_POST["toplace"];
     $date = $_SESSION['date'];
     $tripno = $_POST['tripno'];
-    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE date='.$date.' AND tripno='.$tripno.';");
+    $from = $_SESSION['fromplace'];
+    $to = $_SESSION['toplace'];
+    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE fromdate='.$date.' AND tripno='.$tripno.' AND fromplace='.$from.' AND toplace='.$to.';");
     $rowi = mysqli_fetch_row($queryi);
     $busno = $rowi[0];
     
