@@ -65,7 +65,7 @@
             $sql = "SELECT tripno,fromplace, toplace, fromtime, totime
             FROM schedule 
             WHERE LOWER(fromplace) = LOWER('$fromplace') AND LOWER(toplace) = LOWER('$toplace') AND fromdate = '$date' ;";
-            echo $sql;
+            #echo $sql;
             $query = mysqli_query($conn, $sql);
             $rows = mysqli_num_rows($query);
             if ($rows != 0) {
@@ -80,14 +80,14 @@
                                 <td>" . $row[4] . "</td>
                                 <td><input type='radio' name='tripno' value=".$row[0]."></td>
                              </tr>";
-                    echo $str;
+                    #echo $str;
                     $time .= "<option value=".$row[1].">";
                 }
             ?>
                 <html>
                 <script>
-                    document.getElementById("data").innerHTML = "<?php $str; ?>";
-                    document.getElementById("buses").innerHTML= "<?php $time; ?>";
+                    //document.getElementById("data").innerHTML = "<?php echo $str; ?>";
+                    //document.getElementById("buses").innerHTML= "<?php $time; ?>";
                 </script>
 
                 </html>
@@ -160,13 +160,14 @@
             <th>Reaching time</th>
             <th>Selection</th>
         </tr>
+        <?php echo $str; ?>
         <div id="data">
 
         </div>
         
     </table>
     
-        <button type="submit">Submit</button>
+        <button type="submit"style="margin:10px 1000px;">Submit</button>
     </form>
 </body>
 
