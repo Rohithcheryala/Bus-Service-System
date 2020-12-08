@@ -80,8 +80,7 @@
             LIMIT 1";
     $query = mysqli_query($conn, $sql);
     $row = mysqli_fetch_row($query);
-    $transactionID = $row[0];
-    
+    $id = $row[0]+1;
 
 
     for ($i=1;$i<=40;$i++) {
@@ -91,6 +90,9 @@
             $query = mysqli_query($mysqli, $sql);
         }
     }
+
+    $_SESSION['transid']=$id;
+    header("Location:confirm.php");
     //echo $arr[5];
     //echo $arr[13];
     //echo $arr[14];
