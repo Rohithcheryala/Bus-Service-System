@@ -14,15 +14,19 @@
     $db = "bssdb";
 
     $conn = mysqli_connect($servername, $username, $password, $db);
-    $sql = "SELECT * FROM employee ;" ;
+    $sql = "SELECT * FROM employees ;" ;
     $query = mysqli_query($conn, $sql);
     $str = "";
-    while ($row = mysqli_fetch_array($query)) {
+    $str = "<tr>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>";
+    while ($row = mysqli_fetch_row($query)) {
         $name = $row[0];
         $salary = $row[1];
         $str .= "<tr>
-                    <td>'$name'</td>
-                    <td>'$salary'</td>
+                    <td>" . $name . "</td>
+                    <td>" . $salary . "</td>
                 </tr>";
     }
     ?>
@@ -49,7 +53,9 @@
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft">
-
+        <table>
+            <?php echo $str; ?>
+        </table>
     </div>
 </body>
 

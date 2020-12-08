@@ -14,9 +14,20 @@ $password = "";
 $db="bssdb";
 
 $conn = mysqli_connect($servername, $username, $password, $db);
-$sql = "SELECT * FROM transactions ;";
+$sql = "SELECT * FROM transaction ;";
 $query = mysqli_query($conn, $sql);
-while ($row = mysqli_fetch_array($query)) {
+$str = "";
+$str .= "<tr>
+            <th>transactionID</th>
+            <th>Card number</th>
+            <th>Bus Number</th>
+            <th>Trip Number</th>
+            <th>Seat number</th>
+            <th>From place</th>
+            <th>To place</th>
+            <th>Date</th>
+        </tr>";
+while ($row = mysqli_fetch_row($query)) {
     $transactionID = $row[0];
     $cardno = $row[1];
     $busno = $row[2];
@@ -26,14 +37,14 @@ while ($row = mysqli_fetch_array($query)) {
     $toplace = $row[6];
     $fromdate = $row[7];
     $str .= "<tr>
-                <td>'$transactionID'</td>
-                <td>'$cardno'</td>
-                <td>'$busno'</td>
-                <td>'$tripno'</td>
-                <td>'$seatno'</td>
-                <td>'$fromplace'</td>
-                <td>'$toplace'</td>
-                <td>'$fromdate'</td>
+                <td>" . $transactionID . "</td>
+                <td>" . $cardno . " </td>
+                <td>" . $busno . "</td>
+                <td>" . $tripno . "</td>
+                <td>" . $seatno . "</td>
+                <td>" . $fromplace . "</td>
+                <td>" . $toplace . "</td>
+                <td>" . $fromdate . "</td>
             </tr>";
 }
 ?>
@@ -59,7 +70,9 @@ while ($row = mysqli_fetch_array($query)) {
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft">
-        
+        <table>
+            <?php echo $str; ?>
+        </table>
     </div>
     </body>
 </html>

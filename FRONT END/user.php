@@ -19,7 +19,6 @@
     $str = "";
     $str .= "<tr>
                 <th>Card number</th>
-                <th>Password</th>
                 <th>First name</th>
                 <th>Last name</th>
                 <th>Email</th>
@@ -29,7 +28,6 @@
     while ($row = mysqli_fetch_row($query)) {
         $str .= "<tr>
                     <td>" . $row[0] . "</td>
-                    <td>" . $row[1] . "</td>
                     <td>" . $row[2] . "</td>
                     <td>" . $row[3] . "</td>
                     <td>" . $row[4] . "</td>
@@ -61,7 +59,9 @@
     </div>
     <br><br><br><br><br><br><br><br><br>
     <div class="floleft">
-        <?php echo $str; ?>
+        <table>
+            <?php echo $str; ?>
+        </table>
     </div>
 </body>
 
