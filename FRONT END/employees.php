@@ -39,11 +39,11 @@
             </div>
         </div>
         <div class="topnav">
-            <a href="scshedule">Schedule</a>
-            <a href="user">Users</a>
+            <a href="schedule.php">Schedule</a>
+            <a href="user.php">Users</a>
             <a class="active">Employees</a>
-            <a href="accounts">Accounts</a>
-            <a href="transactions">Transactions</a>
+            <a href="accounts.php">Accounts</a>
+            <a href="transactions_admin.php">Transactions</a>
             <a class="logout">logout</a>
         </div>
     </div>
