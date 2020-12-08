@@ -70,7 +70,7 @@
             if ($rows != 0) {
                 $str = "";
                 $time = "";
-                while ($row = mysqli_fetch_row($query)) {
+                while ($row = mysqli_fetch_row($querymo)) {
                     $str += "<tr>
                                 <td>".$row["tripno"]."</td>
                                 <td>" . $row["fromplace"] . "</td>
