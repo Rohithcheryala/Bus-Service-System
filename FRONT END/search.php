@@ -16,6 +16,7 @@
     session_start();
     $fromplaceErr = $toplaceErr = "";
 
+    $str="";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $servername = "localhost";
         $username = "root";
@@ -114,9 +115,9 @@
             </div>
         </div>
         <div class="topnav">
-            <a class="active" href="homepage.php">Home</a>
-            <a>My transactions</a>
-
+            <a class="active" href="search.php">Home</a>
+            <a href="transactions.php">My transactions</a>
+            <a href="profile.php">Profile</a>
             <a class="logout">logout</a>
         </div>
     </div>

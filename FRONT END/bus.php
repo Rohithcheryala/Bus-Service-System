@@ -64,8 +64,8 @@
         </div>
         <div class="topnav">
             <a class="active">Home</a>
-            <a>Transactions</a>
-            <a>Profile</a>
+            <a href="transactions.php">Transactions</a>
+            <a href="profile.php">Profile</a>
             <a class="logout">logout</a>
         </div>
     </div>

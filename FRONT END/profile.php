@@ -63,15 +63,15 @@
             </div>
         </div>
         <div class="topnav">
-            <a href="#searchpage">Home</a>
+            <a href="search.php">Home</a>
             <a href="transactions.php">Transactions</a>
             <a class="active">Profile</a>
             <a class="logout">logout</a>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br>hl 
+    <br><br><br><br><br><br><br><br><br> 
     <div class="floleft" id="dat">
-    okkk <br><br><br>okkk
+    <br><br><br>
         
     </div>
     <script>
