@@ -10,7 +10,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// create user table
+// drop database
 $sql = "DROP DATABASE bssDB";
 $query = mysqli_query($conn, $sql);
 ?>

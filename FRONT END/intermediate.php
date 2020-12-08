@@ -10,6 +10,7 @@
     $busno = $_SESSION['busno'];
     $tripno = $_SESSION['tripno'];
     $cardno = $_SESSION['cardno'];
+    $transactionID = $_SESSION['transactionID'];
 
     $servername = "localhost";
     $username = "root";

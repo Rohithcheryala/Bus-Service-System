@@ -45,7 +45,7 @@
         for ($no = 1; $no <= 4; $no++) {
             $seatno = $rows * 4 + $no;
             $row = mysqli_fetch_row($query);
-            if ($row[1] === 1){
+            if ($row[1] == 1){
                 $str .= "<input style='width:20px;' type='checkbox' id='$seatno' name='$seatno' disabled unchecked>
                             <label style='display:inline-block;width:20px; for='$seatno>$seatno</label>&nbsp&nbsp&nbsp";
             } else {
