@@ -753,11 +753,17 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     // transaction table
-    $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate,todate)
-    VALUES ('90000001','120001','R1B1','1','10','Mumbai','Delhi','2020-12-05','2020-12-06') ;";
+    $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
+    VALUES ('90000001','120001','R1B1','1','10','Mumbai','Delhi','2020-12-05') ;";
     $sql .= "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate,todate)
-    VALUES ('90000002','120002','R1B1','1','20','Mumbai','Delhi','2020-12-05','2020-12-06') ;";
+    VALUES ('90000002','120002','R1B1','1','20','Mumbai','Delhi','2020-12-05') ;";
     $query = mysqli_multi_query($conn, $sql);
+    if ($query) {
+        echo 1;
+      } else {
+        echo "r1";
+        echo mysqli_error($conn);
+      }
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     // revenue table
