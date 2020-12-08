@@ -34,10 +34,14 @@
 
     $password = $row[0];
     $firstname = $row[1];
+    $_SESSION['fname']=$firstname;
     $lastname = $row[2];
+    $_SESSION['lname']=$lastname;
     $email = $row[3];
+    $_SESSION['email']=$email;
     $phno = $row[4];
     $phno = "{$phno}";
+    $_SESSION['phno']=$phno;
     $balance = $row[5];
     // echo $firstname . " " . $lastname . " " . $email . " " . $phno . " " . $balance . " " . $password;
     $str = "";
@@ -93,6 +97,10 @@
     <div class="floleft" id="dat"style="margin:10px 250px;">
     <br><br><br>
         <?php echo $str; ?>
+    
+    
+        <button style="margin:10px 300px;" type="submit" onclick="window.location.href='editprofile.php'">Edit Profile</button> 
+    
     </div>
     <script>
         var data = '<?php echo $str; ?>';
