@@ -48,11 +48,11 @@
             <a class="active">Employees</a>
             <a href="accounts.php">Accounts</a>
             <a href="transactions_admin.php">Transactions</a>
-            <a class="logout">logout</a>
+            <a href="index.php">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
-    <div class="floleft">
+    <div class="floleft" style="margin:10px 250px;">
         <table>
             <?php echo $str; ?>
         </table>

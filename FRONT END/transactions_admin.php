@@ -65,7 +65,7 @@ while ($row = mysqli_fetch_row($query)) {
         <a href="employees.php">Employees</a>
         <a href="accounts.php">Accounts</a>
         <a class="active">Transactions</a>
-        <a class="logout">logout</a>
+        <a href="index.php">logout</a>
     </div>
     </div>
     <br><br><br><br><br><br><br><br><br>

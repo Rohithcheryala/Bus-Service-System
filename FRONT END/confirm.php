@@ -45,9 +45,9 @@
     </div>
     <div class="topnav">
         <a class="active" href="search.php">Home</a>
-        <a href="transactions.php">My Transactions</a>
+        <a href="transactions_user.php">My Transactions</a>
         <a href="profile.php">Profile</a>        
-        <a class="logout">logout</a>
+        <a href="index.php">logout</a>
     </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
