@@ -108,16 +108,17 @@
             $query = mysqli_query($conn, $sql);
             $row = mysqli_fetch_row($query);
             $cardno = $row[0] + 1;
-            ?>
-            <html><script type="text/javascript">
-            alert(<?php echo "Card Number   : '$cardno'" ;?>);
-            </script><html>
-            <?php
-
             $sql = "INSERT INTO user(cardno,password,firstname,lastname,email,phno,balance)
             VALUES ('$cardno', '$password', '$fname', '$lname', '$email', '$phno', '10000') ;";
             $query = mysqli_query($conn, $sql);
-            header("Location:index.php");
+            $ret = "Card number : ". $cardno ;
+            ?>
+            <html><script type="text/javascript">
+            window.alert("<?php echo $ret; ?>");
+            window.location.href="index.php";
+            </script><html>
+            <?php
+
         }
     }
 
