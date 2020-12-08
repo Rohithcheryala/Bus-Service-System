@@ -767,4 +767,20 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     // revenue table
+
+
+    // busfare table
+    $sql = "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Mumbai','Delhi','2000');";
+    $sql .= "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Delhi','Hyderabad','3000');";
+    $sql .= "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Hyderabad','Chennai','1500');";
+    $sql .= "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Hyderabad','Mumbai','3500');";
+    $sql .= "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Hyderabad','Banglore','1500');";
+    $sql .= "INSERT INTO busfare(fromplace,toplace,fare)
+    VALUES ('Hyderabad','Goa','4000');";
+    $query = mysqli_multi_query($conn, $sql);
 ?>

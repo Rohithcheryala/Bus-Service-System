@@ -156,6 +156,13 @@ if ($query) {
   }
 
 
+// create busfare table
+$sql = "CREATE TABLE busfare (
+    fromplace VARCHAR(30) NOT NULL,
+    toplace VARCHAR(30) NOT NULL,
+    fare INT(6) NOT NULL
+    );";
+$query = mysqli_query($conn, $sql);
 // closing connection
 mysqli_close($conn);
 ?>

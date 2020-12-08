@@ -52,7 +52,17 @@
     $_SESSION['count'] = $count;
     $_SESSION['seats'] = $seats;
 
-    $totalamount = $count * $seats ;
+    $sql = "SELECT fare 
+            FROM busfare 
+            WHERE fromplace = '$fromplace' AND toplace = '$toplace' ;";
+    $query = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($query) > 0) {
+        $row = mysqli_fetch_row($query);
+        $fare = $row[0];
+    }
+
+
+    $totalamount = $count * $seats * $fare;
     $sql = "SELECT balance FROM user 
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);
@@ -63,6 +73,7 @@
             SET balance = " . $remainingbalance . "
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);
+
     //echo $arr[5];
     //echo $arr[13];
     //echo $arr[14];
