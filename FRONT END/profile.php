@@ -66,7 +66,7 @@
             <a href="search.php">Home</a>
             <a href="transactions_user.php">Transactions</a>
             <a class="active">Profile</a>
-            <a href="index.php">logout</a>
+            <a class="logout" href="index.php">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br> 

@@ -54,7 +54,7 @@
             <a href="employees.php">Employees</a>
             <a href="accounts.php">Accounts</a>
             <a href="transactions_admin.php">Transactions</a>
-            <a href="index.php">logout</a>
+            <a class="logout" href="index.php">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
