@@ -51,10 +51,10 @@
     </div>
     </div>
     <br><br><br><br><br><br><br><br><br>
-    <div class="floleft">
+    <div class="floleft" style="margin : 10px 250px;">
         <table>
             <tr>
-                <td> Transaction no</td>
+                <td> Transaction ID</td>
                 <td></td>
             </tr>
             <tr>
@@ -90,7 +90,7 @@
                 <td><?php echo $seats; ?></td>
             </tr>
         </table>
-        <button value="ok" onclick="window.location.href='search.php'" name="ok">ok</button>
+        <button type="submit" style="margin:10px 450px;" value="ok" onclick="window.location.href='search.php'" name="ok">ok</button>
     </div>
     </body>
 </html>

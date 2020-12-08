@@ -17,6 +17,7 @@
     $fromplaceErr = $toplaceErr = "";
 
     $str="";
+    #echo $_SESSION['cardno'];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $servername = "localhost";
         $username = "root";

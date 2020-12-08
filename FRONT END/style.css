@@ -87,7 +87,16 @@ button[type=submit],button[type=reset]{
     
 
 }
-
+.but{
+    border-radius:30px;
+    border :none;
+    font-size: 17px;
+    margin : 10px 0px;
+    padding : 1px 20px;
+    background-color:darkblue;
+    color:white;
+    
+}
 .custom{
     margin-top: 10px;
     display: inline-flex;
