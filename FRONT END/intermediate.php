@@ -10,6 +10,7 @@
     $busno = $_SESSION['busno'];
     $tripno = $_SESSION['tripno'];
     $cardno = $_SESSION['cardno'];
+    $transactionID = $_SESSION['transid'];
     // $transactionID = $_SESSION['transactionID'];
 
     $servername = "localhost";
@@ -74,6 +75,19 @@
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);
 
+
+    $sql = "SELECT transactionID FROM transaction
+            ORDER BY transactionID DESC
+            LIMIT 1;";
+    $query = mysqli_query($conn, $sql);
+    if ($mysqli_num_rows($query) > 0) {
+        $row = mysqli_fetch_row($query);
+        $id = $row[0];
+        $id = $id + 1;
+        $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
+        VALUES ('$id','$cardno', '$busno', '$tripno', '$seatno', '$fromplace','toplace','fromdate');";
+        $query = mysqli_query($mysqli, $sql);
+    }
     //echo $arr[5];
     //echo $arr[13];
     //echo $arr[14];
