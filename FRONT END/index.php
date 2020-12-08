@@ -69,7 +69,7 @@
             if ($rows == 1) {
                 // go to respective home page
                 $_SESSION['cardno'] = $cardno;
-                header("Location: userfirstpage.php");
+                header("Location:search.php");
                 
                 
             } else {
