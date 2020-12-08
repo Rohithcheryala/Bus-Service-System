@@ -755,7 +755,7 @@
     // transaction table
     $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
     VALUES ('90000001','120001','R1B1','1','10','Mumbai','Delhi','2020-12-05') ;";
-    $sql .= "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate,todate)
+    $sql .= "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
     VALUES ('90000002','120002','R1B1','1','20','Mumbai','Delhi','2020-12-05') ;";
     $query = mysqli_multi_query($conn, $sql);
     if ($query) {
