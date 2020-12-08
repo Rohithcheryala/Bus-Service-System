@@ -28,10 +28,12 @@
     $tripno = $_POST['tripno'];
     $from = $_SESSION['fromplace'];
     $to = $_SESSION['toplace'];
-    $queryi = mysqli_query($conn,"SELECT busno FROM schedule WHERE fromdate='.$date.' AND tripno='.$tripno.' AND fromplace='.($from.' AND toplace='.$to.';");
+    $sql =  "SELECT busno FROM schedule WHERE fromdate='$date' AND tripno='$tripno' AND fromplace='$from' AND toplace='$to';";
+    $queryi = mysqli_query($conn,$sql);
     $rowi = mysqli_fetch_row($queryi);
     $busno = $rowi[0];
     
+    $conn = mysqli_connect($servername, $username, $password, $db);
     $str = "";
     $sql = "SELECT seatno, status
             FROM " . $busno . "
