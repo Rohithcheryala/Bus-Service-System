@@ -28,11 +28,11 @@
             </div>
         </div>
         <div class="topnav">
-            <a href="schedule">Schedule</a>
+            <a href="schedule.php">Schedule</a>
             <a class="active">Users</a>
-            <a href=#employeepage>Employees</a>
-            <a href="accounts">Accounts</a>
-            <a href="transactions">Transactions</a>
+            <a href="employees.php">Employees</a>
+            <a href="accounts.php">Accounts</a>
+            <a href="transactions.php">Transactions</a>
             <a class="logout">logout</a>
         </div>
     </div>

@@ -49,10 +49,10 @@ while ($row = mysqli_fetch_array($query)) {
         </div>
     </div>
     <div class="topnav">
-        <a href="schedule">Schedule</a>
-        <a href="user">Users</a>
-        <a href=#employeepage>Employees</a>
-        <a href="accounts">Accounts</a>
+        <a href="schedule.php">Schedule</a>
+        <a href="user.php">Users</a>
+        <a href="employees.php">Employees</a>
+        <a href="accounts.php">Accounts</a>
         <a class="active">Transactions</a>
         <a class="logout">logout</a>
     </div>

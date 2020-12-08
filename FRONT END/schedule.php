@@ -28,10 +28,10 @@ $conn = mysqli_connect($servername, $username, $password, $db);
     </div>
     <div class="topnav">
         <a class="active">Schedule</a>
-        <a href="user">Users</a>
-        <a href=#employeepage>Employees</a>
-        <a href="accounts">Accounts</a>
-        <a href="transactions">Transactions</a>
+        <a href="user.php">Users</a>
+        <a href="employees.php">Employees</a>
+        <a href="accounts.php">Accounts</a>
+        <a href="transactions_admin.php">Transactions</a>
         <a class="logout">logout</a>
     </div>
     </div>
