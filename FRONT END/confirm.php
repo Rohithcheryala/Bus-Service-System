@@ -44,8 +44,8 @@
         </div>
     </div>
     <div class="topnav">
-        <a href="search.php">Home</a>
-        <a class="active">My Transactions</a>
+        <a class="active" href="search.php">Home</a>
+        <a href="transactions.php">My Transactions</a>
         <a href="profile.php">Profile</a>        
         <a class="logout">logout</a>
     </div>
@@ -90,7 +90,7 @@
                 <td><?php echo $seats; ?></td>
             </tr>
         </table>
-        <button value="ok" onclick="window.location.href='search.php'">
+        <button value="ok" onclick="window.location.href='search.php'" name="ok">ok</button>
     </div>
     </body>
 </html>
