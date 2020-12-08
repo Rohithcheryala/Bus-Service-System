@@ -110,7 +110,7 @@
             $cardno = $row[0] + 1;
             ?>
             <html><script type="text/javascript">
-            alert(<?php echo "Card Number : '$cardno'" ;?>);
+            alert(<?php echo "Card Number  : '$cardno'" ;?>);
             </script><html>
             <?php
 

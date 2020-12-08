@@ -81,6 +81,7 @@
     $query = mysqli_query($conn, $sql);
     $row = mysqli_fetch_row($query);
     $transactionID = $row[0];
+    
 
 
     for ($i=1;$i<=40;$i++) {
