@@ -57,13 +57,14 @@
             FROM busfare 
             WHERE fromplace = '$fromplace' AND toplace = '$toplace' ;";
     $query = mysqli_query($conn, $sql);
+    $fare=0;
     if (mysqli_num_rows($query) > 0) {
         $row = mysqli_fetch_row($query);
         $fare = $row[0];
     }
 
 
-    $totalamount = $count * $seats * $fare;
+    $totalamount = $count*$fare;
     $sql = "SELECT balance FROM user 
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);
@@ -87,7 +88,7 @@
         if ($arr[$i] == 1){
             $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
             VALUES ('$id','$cardno', '$busno', '$tripno', '$i', '$fromplace','toplace','fromdate');";
-            $query = mysqli_query($mysqli, $sql);
+            $query = mysqli_query($conn, $sql);
         }
     }
 
