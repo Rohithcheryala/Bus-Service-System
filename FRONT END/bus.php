@@ -32,6 +32,8 @@
     $queryi = mysqli_query($conn,$sql);
     $rowi = mysqli_fetch_row($queryi);
     $busno = $rowi[0];
+    $_SESSION['busno']=$busno;
+    $_SESSION['tripno']=$tripno;
     
     $conn = mysqli_connect($servername, $username, $password, $db);
     $str = "";
