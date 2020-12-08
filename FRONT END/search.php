@@ -30,11 +30,12 @@
         $toplace = $_POST['toplace'];
         $_SESSION['toplace']=$toplace;
         $date = date('Y-m-d', strtotime($_POST['date']));
-        $_SESSION['date']=$date
+        $_SESSION['date']=$date;
 
         if (preg_match("/^([a-zA-Z' ]+)$/", $fromplace)) {
             $fname = test_input($_POST["fplace"]);
-        } else {
+        } 
+        else {
             $fnameErr = "Must contain alphabets  only";
     ?>
             <html>
