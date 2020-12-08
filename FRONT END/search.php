@@ -65,27 +65,29 @@
             $sql = "SELECT tripno,fromplace, toplace, fromtime, totime
             FROM schedule 
             WHERE LOWER(fromplace) = LOWER('$fromplace') AND LOWER(toplace) = LOWER('$toplace') AND fromdate = '$date' ;";
+            echo $sql;
             $query = mysqli_query($conn, $sql);
             $rows = mysqli_num_rows($query);
             if ($rows != 0) {
                 $str = "";
                 $time = "";
                 while ($row = mysqli_fetch_row($query)) {
-                    $str += "<tr>
-                                <td>".$row["tripno"]."</td>
-                                <td>" . $row["fromplace"] . "</td>
-                                <td>" . $row["fromtime"] . "</td>
-                                <td>" . $row["toplace"] . "</td>
-                                <td>" . $row["totime"] . "</td>
-                                <td><input type='radio' name='tripno' value=".$row["tripno"]."></td>
+                    $str .= "<tr>
+                                <td>".$row[0]."</td>
+                                <td>" . $row[1] . "</td>
+                                <td>" . $row[3] . "</td>
+                                <td>" . $row[2] . "</td>
+                                <td>" . $row[4] . "</td>
+                                <td><input type='radio' name='tripno' value=".$row[0]."></td>
                              </tr>";
-                    $time += "<option value=".$row["fromtime"].">";
+                    echo $str;
+                    $time .= "<option value=".$row[1].">";
                 }
             ?>
                 <html>
                 <script>
-                    document.getElementById("data").innerHTML = <?php '$str' ?>
-                    document.getElementById("buses").innerHTML=<?php '$time'?>
+                    document.getElementById("data").innerHTML = "<?php $str; ?>";
+                    document.getElementById("buses").innerHTML= "<?php $time; ?>";
                 </script>
 
                 </html>
