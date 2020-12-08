@@ -18,7 +18,7 @@ $sql = "CREATE TABLE user (
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
-    phno INT(10) NOT NULL UNIQUE,
+    phno BIGINT(10) NOT NULL UNIQUE,
     balance INT(6) NOT NULL
     )";
 $query = mysqli_query($conn, $sql);
@@ -36,7 +36,7 @@ $sql = "CREATE TABLE admin (
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
-    phno INT(10) NOT NULL UNIQUE,
+    phno BIGINT(10) NOT NULL UNIQUE,
     balance INT(6) NOT NULL
     )";
 $query = mysqli_query($conn, $sql);

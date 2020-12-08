@@ -49,7 +49,7 @@
         }
 
         if(preg_match("/^([a-zA-Z' ]+)$/",$lname)) {
-            $lname = test_input($_POST["fname"]);
+            $lname = test_input($_POST["lname"]);
         } else {
             $lnameErr = "Must contain alphabets  only";
             ?>
