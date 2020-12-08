@@ -10,7 +10,7 @@
     $busno = $_SESSION['busno'];
     $tripno = $_SESSION['tripno'];
     $cardno = $_SESSION['cardno'];
-    $transactionID = $_SESSION['transactionID'];
+    // $transactionID = $_SESSION['transactionID'];
 
     $servername = "localhost";
     $username = "root";
@@ -51,6 +51,18 @@
 
     $_SESSION['count'] = $count;
     $_SESSION['seats'] = $seats;
+
+    $totalamount = $count * $seats ;
+    $sql = "SELECT balance FROM user 
+            WHERE cardno = " . $cardno . " ;" ;
+    $query = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_row($query);
+    $balance = $row[0];
+    $remainingbalance = $balance - $totalamount;
+    $sql = "UPDATE user 
+            SET balance = " . $remainingbalance . "
+            WHERE cardno = " . $cardno . " ;" ;
+    $query = mysqli_query($conn, $sql);
     //echo $arr[5];
     //echo $arr[13];
     //echo $arr[14];
