@@ -11,7 +11,7 @@ if (!$conn) {
 }
 
 // Create database
-$sql = "CREATE DATABASE BSSdb";
+$sql = "CREATE DATABASE bssdb";
 $query = mysqli_query($conn, $sql);
 if ($query) {
   echo "Database created successfully".$query;

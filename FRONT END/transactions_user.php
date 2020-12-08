@@ -13,13 +13,14 @@ $username = "root";
 $password = "";
 $db="bssdb";
 
+$cardno = $_SESSION['cardno'];
+
 $conn = mysqli_connect($servername, $username, $password, $db);
-$sql = "SELECT * FROM transaction ;";
+$sql = "SELECT * FROM transaction WHERE cardno='$cardno';";
 $query = mysqli_query($conn, $sql);
 $str = "";
 $str .= "<tr>
             <th>transactionID</th>
-            <th>Card number</th>
             <th>Bus Number</th>
             <th>Trip Number</th>
             <th>Seat number</th>
@@ -38,7 +39,6 @@ while ($row = mysqli_fetch_row($query)) {
     $fromdate = $row[7];
     $str .= "<tr>
                 <td>" . $transactionID . "</td>
-                <td>" . $cardno . " </td>
                 <td>" . $busno . "</td>
                 <td>" . $tripno . "</td>
                 <td>" . $seatno . "</td>
@@ -60,11 +60,10 @@ while ($row = mysqli_fetch_row($query)) {
         </div>
     </div>
     <div class="topnav">
-        <a href="schedule.php">Schedule</a>
-        <a href="user.php">Users</a>
-        <a href="employees.php">Employees</a>
-        <a href="accounts.php">Accounts</a>
-        <a class="active">Transactions</a>
+        <a href="search.php">Home</a>
+        <a class="active">My Transactions</a>
+        <a href="profile.php">Profile</a>
+        
         <a class="logout" href="index.php">logout</a>
     </div>
     </div>

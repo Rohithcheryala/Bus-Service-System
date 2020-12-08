@@ -17,6 +17,7 @@
     $fromplaceErr = $toplaceErr = "";
 
     $str="";
+    #echo $_SESSION['cardno'];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $servername = "localhost";
         $username = "root";
@@ -116,9 +117,9 @@
         </div>
         <div class="topnav">
             <a class="active" href="search.php">Home</a>
-            <a href="transactions.php">My transactions</a>
+            <a href="transactions_user.php">My transactions</a>
             <a href="profile.php">Profile</a>
-            <a class="logout">logout</a>
+            <a class="logout" href="index.php">logout</a>
         </div>
     </div>
     <br><br><br><br><br><br><br><br><br>

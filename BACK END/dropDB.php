@@ -11,6 +11,6 @@ if (!$conn) {
 }
 
 // drop database
-$sql = "DROP DATABASE bssDB";
+$sql = "DROP DATABASE bssdb";
 $query = mysqli_query($conn, $sql);
 ?>
