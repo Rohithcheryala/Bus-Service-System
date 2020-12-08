@@ -9,6 +9,7 @@
     $date = $_SESSION['date'];
     $busno = $_SESSION['busno'];
     $tripno = $_SESSION['tripno'];
+    $cardno = $_SESSION['cardno'];
 
     $servername = "localhost";
     $username = "root";
