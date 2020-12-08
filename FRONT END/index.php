@@ -136,7 +136,8 @@
 
                 <br><br>
                 <p>
-                    Not a user <a href="usersignup.php">sign up</a>
+                    Not a user <a href="usersignup.php">sign up</a><br>
+                    log in as <a href="adminloginpage.php">Admin</a>
                 </p>
             </div>
         </form>
