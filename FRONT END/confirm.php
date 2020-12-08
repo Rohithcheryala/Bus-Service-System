@@ -29,7 +29,7 @@
     $cardno = $_SESSION['cardno'];
     $count = $_SESSION['count'];
     $seats = $_SESSION['seats'];
-
+    $transid = $_SESSION['transid'];
 
 
 ?>
@@ -55,7 +55,7 @@
         <table>
             <tr>
                 <td> Transaction ID</td>
-                <td></td>
+                <td><?php echo $transid; ?></td>
             </tr>
             <tr>
                 <td>Card no</td>
