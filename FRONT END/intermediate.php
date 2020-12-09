@@ -37,6 +37,8 @@
         else{
             $arr[$i]=0;
         }
+
+        //echo $arr[$i];
     }
 
     $count = 0;
@@ -44,9 +46,10 @@
     for($i=1;$i<=40;$i++){
         if ($arr[$i]==1){
             $count+=1;
-            $sql = "UPDATE ".$busno." SET status=1 WHERE tripno=".$tripno." AND date='$date' AND seatno=".$i."; ";
+            $sql = "UPDATE $busno SET status=1 WHERE tripno=$tripno AND date='$date' AND seatno=$i; ";
             $query = mysqli_query($conn,$sql);
             $seats .= " $i";
+            //echo $sql;
         }
     }
 
@@ -64,7 +67,12 @@
     }
 
 
+
     $totalamount = $count*$fare;
+
+    $_SESSION['total']=$totalamount;
+    $_SESSION['fare']=$fare;
+
     $sql = "SELECT balance FROM user 
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);
