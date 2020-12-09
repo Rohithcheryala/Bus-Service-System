@@ -39,7 +39,8 @@
     $str = "";
     $sql = "SELECT seatno, status
             FROM " . $busno . "
-            WHERE date = '$date' AND tripno = " . $tripno . " ;"; //todo order by must be added 
+            WHERE date = '$date' AND tripno = " . $tripno . " 
+            order by seatno asc;"; //todo order by must be added 
     $query = mysqli_query($conn, $sql);
     for ($rows = 0; $rows <= 9; $rows++) {
         for ($no = 1; $no <= 4; $no++) {
