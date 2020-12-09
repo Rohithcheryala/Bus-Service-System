@@ -67,7 +67,12 @@
     }
 
 
+
     $totalamount = $count*$fare;
+
+    $_SESSION['total']=$totalamount;
+    $_SESSION['fare']=$fare;
+
     $sql = "SELECT balance FROM user 
             WHERE cardno = " . $cardno . " ;" ;
     $query = mysqli_query($conn, $sql);

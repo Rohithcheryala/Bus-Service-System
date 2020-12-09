@@ -30,6 +30,8 @@
     $count = $_SESSION['count'];
     $seats = $_SESSION['seats'];
     $transid = $_SESSION['transid'];
+    $amount=$_SESSION['total'];
+    $fare=$_SESSION['fare'];
 
 
 ?>
@@ -88,6 +90,14 @@
             <tr>
                 <td>Seats</td>
                 <td><?php echo $seats; ?></td>
+            </tr>
+            <tr>
+                <td>Fare</td>
+                <tf><?php echo $fare; ?></td>
+            </tr>
+            <tr>
+                <td>Total amount</td>
+                <td><?php echo $amount; ?></td>
             </tr>
         </table>
         <button type="submit" style="margin:10px 450px;" value="ok" onclick="window.location.href='search.php'" name="ok">ok</button>
