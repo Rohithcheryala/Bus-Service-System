@@ -93,7 +93,7 @@
             </tr>
             <tr>
                 <td>Fare</td>
-                <tf><?php echo $fare; ?></td>
+                <td><?php echo $fare; ?></td>
             </tr>
             <tr>
                 <td>Total amount</td>
