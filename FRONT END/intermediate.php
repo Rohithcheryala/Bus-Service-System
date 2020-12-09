@@ -44,7 +44,7 @@
     for($i=1;$i<=40;$i++){
         if ($arr[$i]==1){
             $count+=1;
-            $sql = "UPDATE .$busno. SET status=1 WHERE tripno='.$tripno.' AND date='.$date.' AND seatno='.$i.'; ";
+            $sql = "UPDATE ".$busno." SET status=1 WHERE tripno=".$tripno." AND date='$date' AND seatno=".$i."; ";
             $query = mysqli_query($conn,$sql);
             $seats .= " $i";
         }
@@ -87,7 +87,7 @@
     for ($i=1;$i<=40;$i++) {
         if ($arr[$i] == 1){
             $sql = "INSERT INTO transaction(transactionID,cardno,busno,tripno,seatno,fromplace,toplace,fromdate)
-            VALUES ('$id','$cardno', '$busno', '$tripno', '$i', '$fromplace','toplace','fromdate');";
+            VALUES ('$id','$cardno', '$busno', '$tripno', '$i', '$fromplace','$toplace','$date');";
             $query = mysqli_query($conn, $sql);
         }
     }

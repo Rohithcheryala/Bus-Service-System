@@ -442,10 +442,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Ishith', '2020-12-05', '1', '0') ;";
+    VALUES ('2', 'Ishith', '2020-12-05', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R3B1 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Ishith', '2020-12-05', '$i', '0') ;";
+                VALUES ('2', 'Ishith', '2020-12-05', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -483,10 +483,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R4B1 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Praveen', '2020-12-05', '1', '0') ;";
+    VALUES ('2', 'Praveen', '2020-12-05', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R4B1 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Praveen', '2020-12-05', '$i', '0') ;";
+                VALUES ('2', 'Praveen', '2020-12-05', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -510,10 +510,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R4B1 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Kannayya', '2020-12-07', '1', '0') ;";
+    VALUES ('2', 'Kannayya', '2020-12-07', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R4B1 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Kannayya', '2020-12-07', '$i', '0') ;";
+                VALUES ('2', 'Kannayya', '2020-12-07', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -551,10 +551,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R4B2 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Kannayya', '2020-12-06', '1', '0') ;";
+    VALUES ('2', 'Kannayya', '2020-12-06', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R4B2 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Kannayya', '2020-12-06', '$i', '0') ;";
+                VALUES ('2', 'Kannayya', '2020-12-06', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -569,10 +569,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R4B2 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Kannayya', '2020-12-07', '1', '0') ;";
+    VALUES ('2', 'Kannayya', '2020-12-07', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R4B2 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Kannayya', '2020-12-07', '$i', '0') ;";
+                VALUES ('2', 'Kannayya', '2020-12-07', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -633,10 +633,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R5B2 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Arjun', '2020-12-05', '1', '0') ;";
+    VALUES ('2', 'Arjun', '2020-12-05', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R5B2 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Arjun', '2020-12-05', '$i', '0') ;";
+                VALUES ('2', 'Arjun', '2020-12-05', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
@@ -665,10 +665,10 @@
     $conn = mysqli_connect($servername, $username, $password, $db);
 
     $sql = "INSERT INTO R6B1 (tripno, driver, date, seatno, status)
-    VALUES ('1', 'Dheeraj', '2020-12-05', '1', '0') ;";
+    VALUES ('2', 'Dheeraj', '2020-12-05', '1', '0') ;";
     for ($i=2; $i <= 40; $i++) {
         $sql .= "INSERT INTO R6B1 (tripno, driver, date, seatno, status)
-                VALUES ('1', 'Dheeraj', '2020-12-05', '$i', '0') ;";
+                VALUES ('2', 'Dheeraj', '2020-12-05', '$i', '0') ;";
     }
     $query = mysqli_multi_query($conn, $sql);
     $conn = mysqli_connect($servername, $username, $password, $db);
